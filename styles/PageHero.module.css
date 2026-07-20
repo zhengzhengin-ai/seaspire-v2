@@ -1,0 +1,227 @@
+/*==============================
+  HERO
+==============================*/
+
+.hero{
+
+  position:relative;
+
+  min-height:65vh;
+
+  display:flex;
+
+  align-items:center;
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  overflow:hidden;
+
+}
+
+
+/*==============================
+  OVERLAY
+==============================*/
+
+.overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,35,55,.78),
+      rgba(0,35,55,.42),
+      rgba(0,35,55,.12)
+    );
+
+}
+
+
+/*==============================
+  CONTAINER
+==============================*/
+
+.container{
+
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+
+  max-width:1200px;
+
+  margin:0 auto;
+
+  padding:0 120px;
+
+}
+
+
+/*==============================
+  TAG
+==============================*/
+
+.tag{
+
+  color:#67E8F9;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  margin-bottom:22px;
+
+}
+
+
+/*==============================
+  TITLE
+==============================*/
+
+.container h1{
+
+  max-width:760px;
+
+  color:#ffffff;
+
+  font-size:72px;
+
+  font-weight:800;
+
+  line-height:1.05;
+
+  margin:0;
+
+}
+
+
+/*==============================
+  DESCRIPTION
+==============================*/
+
+.description{
+
+  max-width:620px;
+
+  margin-top:28px;
+
+  color:#E2E8F0;
+
+  font-size:22px;
+
+  line-height:1.8;
+
+}
+
+
+/*==============================
+  ACCENT
+==============================*/
+
+.container::after{
+
+  content:"";
+
+  display:block;
+
+  width:90px;
+
+  height:4px;
+
+  margin-top:42px;
+
+  border-radius:999px;
+
+  background:#F59E0B;
+
+}
+
+
+/*==============================
+  RESPONSIVE
+==============================*/
+
+@media (max-width:992px){
+
+.container{
+
+padding:0 60px;
+
+}
+
+.container h1{
+
+font-size:56px;
+
+}
+
+.description{
+
+font-size:20px;
+
+}
+
+}
+
+
+@media (max-width:768px){
+
+.hero{
+
+min-height:60vh;
+
+}
+
+.container{
+
+padding:0 24px;
+
+}
+
+.tag{
+
+font-size:14px;
+
+letter-spacing:3px;
+
+}
+
+.container h1{
+
+font-size:42px;
+
+line-height:1.15;
+
+}
+
+.description{
+
+margin-top:22px;
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.container::after{
+
+width:72px;
+
+margin-top:30px;
+
+}
+
+}

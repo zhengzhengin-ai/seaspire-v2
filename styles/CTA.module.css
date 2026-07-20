@@ -1,0 +1,224 @@
+/*==============================
+  CTA
+==============================*/
+
+.cta{
+
+  background:#0F172A;
+
+  padding:120px 40px;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+/*==============================
+  BACKGROUND ACCENT
+==============================*/
+
+.cta::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-120px;
+
+  right:-120px;
+
+  width:360px;
+
+  height:360px;
+
+  border-radius:50%;
+
+  background:rgba(245,158,11,.05);
+
+  filter:blur(40px);
+
+}
+
+.cta::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-140px;
+
+  left:-120px;
+
+  width:320px;
+
+  height:320px;
+
+  border-radius:50%;
+
+  background:rgba(14,116,144,.08);
+
+  filter:blur(45px);
+
+}
+
+
+/*==============================
+  CONTAINER
+==============================*/
+
+.container{
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:900px;
+
+  margin:0 auto;
+
+  text-align:center;
+
+}
+
+
+/*==============================
+  TAG
+==============================*/
+
+.tag{
+
+  color:#67E8F9;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+}
+
+
+/*==============================
+  TITLE
+==============================*/
+
+.container h2{
+
+  margin:24px 0;
+
+  color:#ffffff;
+
+  font-size:58px;
+
+  font-weight:700;
+
+  line-height:1.15;
+
+}
+
+
+/*==============================
+  DESCRIPTION
+==============================*/
+
+.description{
+
+  max-width:760px;
+
+  margin:0 auto 42px;
+
+  color:#CBD5E1;
+
+  font-size:18px;
+
+  line-height:1.9;
+
+}
+
+
+/*==============================
+  BUTTON
+==============================*/
+
+.button{
+
+  display:inline-flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  min-width:190px;
+
+  padding:18px 42px;
+
+  border-radius:12px;
+
+  background:#0E7490;
+
+  color:#ffffff;
+
+  font-size:17px;
+
+  font-weight:600;
+
+  text-decoration:none;
+
+  transition:
+    background .35s ease,
+    transform .35s ease,
+    box-shadow .35s ease;
+
+}
+
+.button:hover{
+
+  background:#005B96;
+
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 12px 30px rgba(245,158,11,.25);
+
+}
+
+
+/*==============================
+  RESPONSIVE
+==============================*/
+
+@media (max-width:768px){
+
+.cta{
+
+padding:80px 24px;
+
+}
+
+.container h2{
+
+font-size:38px;
+
+}
+
+.description{
+
+font-size:17px;
+
+margin-bottom:36px;
+
+}
+
+.button{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+}

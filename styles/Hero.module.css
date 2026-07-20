@@ -1,0 +1,255 @@
+.hero {
+
+  position:relative;
+
+  min-height:calc(100vh - 82px);
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,35,55,.72),
+      rgba(0,35,55,.35),
+      rgba(0,35,55,.08)
+    ),
+    url("/images/hero.webp");
+
+  background-size:cover;
+
+  background-position:center;
+
+  display:flex;
+
+  align-items:center;
+
+  overflow:hidden;
+
+  color:#ffffff;
+
+}
+
+
+
+
+.content {
+
+  position:relative;
+
+  z-index:2;
+
+  max-width:1200px;
+
+  width:100%;
+
+  padding-left:120px;
+
+}
+
+
+
+
+
+.subtitle {
+
+  color:#9fd7ff;
+
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  margin-bottom:24px;
+
+  font-size:16px;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.45);
+
+}
+
+
+
+
+
+.title {
+
+  font-size:72px;
+
+  line-height:1.05;
+
+  margin-bottom:28px;
+
+  font-weight:800;
+
+  letter-spacing:1px;
+
+  text-shadow:
+
+    0 3px 12px rgba(0,0,0,.55),
+
+    0 6px 24px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+.description {
+
+  font-size:24px;
+
+  color:#ffffff;
+
+  margin-bottom:42px;
+
+  text-shadow:
+
+    0 2px 8px rgba(0,0,0,.45);
+
+}
+
+
+
+
+
+.button {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:18px 42px;
+
+  background:#005b96;
+
+  color:#ffffff;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  border:1px solid rgba(255,255,255,.25);
+
+  transition:all .35s ease;
+
+}
+
+
+
+
+
+.button:hover {
+
+  background:#003b5c;
+
+  transform:translateY(-4px);
+
+  box-shadow:
+
+    0 12px 30px rgba(0,0,0,.25);
+
+}
+
+
+
+
+
+.scroll {
+
+  position:absolute;
+
+  bottom:36px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  color:#ffffff;
+
+  font-size:14px;
+
+  letter-spacing:3px;
+
+  z-index:2;
+
+  text-shadow:
+
+    0 2px 8px rgba(0,0,0,.5);
+
+}
+
+
+
+
+
+@media(max-width:1200px){
+
+
+  .content {
+
+    padding-left:70px;
+
+  }
+
+
+  .title {
+
+    font-size:62px;
+
+  }
+
+
+}
+
+
+
+
+@media(max-width:768px){
+
+
+  .hero {
+
+    min-height:680px;
+
+  }
+
+
+  .content {
+
+    padding:40px 25px;
+
+  }
+
+
+  .subtitle {
+
+    font-size:13px;
+
+  }
+
+
+  .title {
+
+    font-size:44px;
+
+  }
+
+
+  .description {
+
+    font-size:18px;
+
+  }
+
+
+  .button {
+
+    padding:16px 32px;
+
+  }
+
+
+}

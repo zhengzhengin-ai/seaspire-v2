@@ -1,0 +1,294 @@
+.about {
+  background: #ffffff;
+}
+
+
+/* =========================
+   ABOUT SEASPIRE
+========================= */
+
+
+.aboutContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 40px;
+}
+
+
+
+.sectionTag {
+  text-align: center;
+  color: #005b96;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+
+
+.aboutContent h2 {
+  text-align: center;
+  color: #003b5c;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+
+
+.aboutContent p {
+  color: #53646f;
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 26px;
+}
+
+
+
+
+
+/* =========================
+   WHY US SECTION
+========================= */
+
+
+.why {
+  background: #f8fbfd;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+
+
+.why h2 {
+  color: #005b96;
+  font-size: 44px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+
+.why h3 {
+  color: #0e7490;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+
+
+
+/* WHY US DESCRIPTION */
+
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: #53646f;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+
+
+
+/* WHY US IMAGE */
+
+
+.whyImage {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: 420px;
+  margin: 20px auto 80px;
+  object-fit: cover;
+}
+
+
+
+
+
+/* =========================
+   3 KEYS WE PROMISED
+========================= */
+
+
+.promise {
+  color: #003b5c;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+
+
+.keys {
+  color: #005b96;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 55px;
+}
+
+
+
+
+
+/* =========================
+   CARD NUMBER
+========================= */
+
+
+.cardNumber {
+  font-size: 54px;
+  font-weight: 700;
+  color: #9fd7ff;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* =========================
+   KEY CARDS
+========================= */
+
+
+.cards {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+
+
+.card {
+
+  background: #ffffff;
+
+  padding: 45px 36px;
+
+  min-height: 300px;
+
+  border: 1px solid #e4edf3;
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+
+
+.card:hover {
+
+  transform: translateY(-8px);
+
+  border-color: #005b96;
+
+  box-shadow:
+    0 20px 45px rgba(0,91,150,.12);
+
+}
+
+
+
+.card h4 {
+
+  color: #003b5c;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+}
+
+
+
+.card p {
+
+  color: #53646f;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  text-align: left;
+
+}
+
+
+
+.card:hover h4 {
+
+  color: #005b96;
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:768px){
+
+
+  .aboutContent {
+
+    padding: 80px 24px;
+
+  }
+
+
+  .aboutContent h2,
+  .why h2 {
+
+    font-size: 34px;
+
+  }
+
+
+  .why {
+
+    padding: 80px 24px;
+
+  }
+
+
+  .why h3 {
+
+    font-size: 22px;
+
+  }
+
+
+  .whyImage {
+
+    height: 280px;
+
+  }
+
+
+  .cards {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+}

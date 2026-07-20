@@ -1,0 +1,299 @@
+.contact {
+
+  background:#ffffff;
+
+  padding:120px 40px;
+
+}
+
+
+
+.container {
+
+  max-width:1200px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:70px;
+
+  align-items:start;
+
+}
+
+
+
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+
+.info {
+
+  padding-right:30px;
+
+}
+
+
+
+.sectionTag {
+
+  color:#005B96;
+
+  font-size:15px;
+
+  font-weight:700;
+
+  letter-spacing:4px;
+
+  margin-bottom:25px;
+
+}
+
+
+
+.info h2 {
+
+  color:#003B5C;
+
+  font-size:42px;
+
+  line-height:1.2;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.info > p {
+
+  color:#475569;
+
+  font-size:18px;
+
+  line-height:1.9;
+
+  margin-bottom:45px;
+
+}
+
+
+
+
+
+.details {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:28px;
+
+}
+
+
+
+.details div {
+
+  border-left:3px solid #005B96;
+
+  padding-left:25px;
+
+}
+
+
+
+.details h3 {
+
+  color:#005B96;
+
+  font-size:20px;
+
+  margin-bottom:8px;
+
+}
+
+
+
+.details p {
+
+  color:#475569;
+
+  font-size:16px;
+
+  line-height:1.7;
+
+}
+
+
+
+
+
+/* =========================
+   INQUIRY FORM
+========================= */
+
+
+.form {
+
+  background:#F8FBFD;
+
+  padding:45px;
+
+  border:1px solid #E5EDF3;
+
+}
+
+
+
+.form h2 {
+
+  color:#003B5C;
+
+  font-size:32px;
+
+  margin-bottom:30px;
+
+}
+
+
+
+.form form {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:18px;
+
+}
+
+
+
+.form input,
+
+.form textarea {
+
+  width:100%;
+
+  padding:16px 18px;
+
+  border:1px solid #D8E3EA;
+
+  background:#ffffff;
+
+  color:#334155;
+
+  font-size:16px;
+
+  font-family:inherit;
+
+}
+
+
+
+.form textarea {
+
+  resize:vertical;
+
+}
+
+
+
+.form input:focus,
+
+.form textarea:focus {
+
+  outline:none;
+
+  border-color:#005B96;
+
+}
+
+
+
+.form button {
+
+  margin-top:10px;
+
+  padding:17px 30px;
+
+  background:#005B96;
+
+  color:#ffffff;
+
+  border:none;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.35s;
+
+}
+
+
+
+.form button:hover {
+
+  background:#003B5C;
+
+  transform:translateY(-3px);
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:900px){
+
+
+.container {
+
+  grid-template-columns:1fr;
+
+  gap:50px;
+
+}
+
+
+
+.info {
+
+  padding-right:0;
+
+}
+
+
+
+.info h2 {
+
+  font-size:34px;
+
+}
+
+
+
+.form {
+
+  padding:30px;
+
+}
+
+
+
+}

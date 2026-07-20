@@ -1,0 +1,326 @@
+.profile {
+  padding: 120px 20px;
+  background: #ffffff;
+}
+
+
+.profileContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+}
+
+
+.profileLeft {
+  border-right: 1px solid #d9e5ec;
+}
+
+
+.sectionTag {
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #005b96;
+  margin-bottom: 30px;
+}
+
+
+.profileLeft h2 {
+  font-size: 72px;
+  line-height: 1;
+  font-weight: 700;
+  color: #003b5c;
+  margin: 0;
+}
+
+
+.profileRight p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #44515a;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* PHILOSOPHY */
+
+
+.philosophy {
+  padding: 120px 20px;
+  background: #f8fbfd;
+}
+
+
+.heading {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 70px;
+}
+
+
+.heading h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #005b96;
+  margin: 0;
+}
+
+
+.subHeading {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #647783;
+}
+
+
+
+.philosophyGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+
+.philosophyCard {
+  background: #ffffff;
+  padding: 45px 35px;
+}
+
+
+.number {
+  display: block;
+  font-size: 42px;
+  font-weight: 700;
+  color: #9fd7ff;
+  margin-bottom: 25px;
+}
+
+
+.philosophyCard h3 {
+  font-size: 26px;
+  color: #003b5c;
+  margin-bottom: 20px;
+}
+
+
+.philosophyCard p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #53646f;
+}
+
+
+
+
+/* STRENGTHS */
+
+
+.strengths {
+  padding: 120px 20px;
+  background: #ffffff;
+}
+
+
+.strengthGrid {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+
+.strengthCard {
+  text-align: center;
+  padding: 40px 20px;
+  border: 1px solid #dce8ef;
+}
+
+
+.strengthCard h3 {
+  font-size: 36px;
+  color: #005b96;
+  margin-bottom: 15px;
+}
+
+
+.strengthCard p {
+  color: #53646f;
+  font-size: 16px;
+}
+
+
+
+.companyBullet {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+
+.companyBullet ul {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  list-style: none;
+}
+
+
+.companyBullet li {
+  font-size: 18px;
+  font-weight: 600;
+  color: #003b5c;
+}
+
+
+
+.companyText {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.companyText p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #44515a;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* PRODUCTION */
+
+
+.production {
+  padding: 120px 20px;
+  background: #f8fbfd;
+}
+
+
+.productionImages {
+  max-width: 1200px;
+  margin: 0 auto 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+.productionImages img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+
+
+.facilityGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+
+.facilityCard {
+  background: #ffffff;
+  padding: 40px 35px;
+}
+
+
+.facilityCard h3 {
+  font-size: 25px;
+  color: #003b5c;
+  margin-bottom: 20px;
+}
+
+
+.facilityCard p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #53646f;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+
+  .profileContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+
+  .profileLeft {
+    border-right: none;
+  }
+
+
+  .philosophyGrid,
+  .facilityGrid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .strengthGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+
+
+  .profile,
+  .philosophy,
+  .strengths,
+  .production {
+    padding: 80px 20px;
+  }
+
+
+  .profileLeft h2 {
+    font-size: 52px;
+  }
+
+
+  .heading h2 {
+    font-size: 34px;
+  }
+
+
+  .strengthGrid,
+  .productionImages {
+    grid-template-columns: 1fr;
+  }
+
+
+  .companyBullet ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+
+  .productionImages img {
+    height: 300px;
+  }
+
+
+}
