@@ -1,4 +1,4 @@
-.footer{
+.footer {
 
   background:#0F172A;
 
@@ -8,7 +8,9 @@
 
 }
 
-.container{
+
+
+.container {
 
   max-width:1200px;
 
@@ -26,13 +28,17 @@
 
 }
 
-.left{
+
+
+.left {
 
   flex:1;
 
 }
 
-.left h2{
+
+
+.left h2 {
 
   margin:0 0 10px;
 
@@ -46,7 +52,9 @@
 
 }
 
-.tagline{
+
+
+.tagline {
 
   margin:0;
 
@@ -58,13 +66,17 @@
 
 }
 
-.right{
+
+
+.right {
 
   width:560px;
 
 }
 
-.contactRow{
+
+
+.contactRow {
 
   display:flex;
 
@@ -74,13 +86,17 @@
 
 }
 
-.contactRow p{
+
+
+.contactRow p {
 
   margin:0;
 
 }
 
-.address{
+
+
+.address {
 
   margin:0;
 
@@ -88,7 +104,9 @@
 
 }
 
-.right p{
+
+
+.right p {
 
   color:#CBD5E1;
 
@@ -96,9 +114,13 @@
 
   line-height:1.7;
 
+  overflow-wrap:anywhere;
+
 }
 
-.right strong{
+
+
+.right strong {
 
   color:#67E8F9;
 
@@ -110,7 +132,9 @@
 
 }
 
-.copyright{
+
+
+.copyright {
 
   border-top:1px solid rgba(255,255,255,.12);
 
@@ -124,64 +148,138 @@
 
 }
 
-@media (max-width:768px){
 
-.container{
 
-display:block;
 
-padding:34px 24px 22px;
 
-}
+/* =========================
+   TABLET
+========================= */
 
-.left{
 
-margin-bottom:28px;
+@media(max-width:900px){
 
-}
 
-.left h2{
+  .container {
 
-font-size:28px;
+    gap:40px;
 
-}
+  }
 
-.tagline{
 
-font-size:14px;
 
-}
+  .right {
 
-.right{
+    width:480px;
 
-width:100%;
+  }
 
-}
 
-.contactRow{
 
-display:block;
+  .address {
+
+    white-space:normal;
+
+  }
+
 
 }
 
-.contactRow p{
 
-margin-bottom:12px;
 
-}
 
-.address{
 
-white-space:normal;
+/* =========================
+   MOBILE
+========================= */
 
-}
 
-.copyright{
+@media(max-width:768px){
 
-padding:16px;
 
-font-size:13px;
+  .container {
 
-}
+    display:block;
+
+    padding:34px 24px 22px;
+
+  }
+
+
+
+  .left {
+
+    margin-bottom:28px;
+
+  }
+
+
+
+  .left h2 {
+
+    font-size:28px;
+
+  }
+
+
+
+  .tagline {
+
+    font-size:14px;
+
+  }
+
+
+
+  .right {
+
+    width:100%;
+
+  }
+
+
+
+  .contactRow {
+
+    display:block;
+
+  }
+
+
+
+  .contactRow p {
+
+    margin-bottom:12px;
+
+  }
+
+
+
+  .address {
+
+    white-space:normal;
+
+    overflow-wrap:anywhere;
+
+  }
+
+
+
+  .right p {
+
+    font-size:15px;
+
+  }
+
+
+
+  .copyright {
+
+    padding:16px;
+
+    font-size:13px;
+
+  }
+
 
 }

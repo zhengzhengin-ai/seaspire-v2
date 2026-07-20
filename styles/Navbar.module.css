@@ -1,40 +1,69 @@
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
 
-  height: 82px;
+  position:sticky;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  top:0;
 
-  padding: 0 70px;
+  z-index:999;
 
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(10px);
+  height:82px;
 
-  border-bottom: 1px solid #e8edf2;
-}
-
-.logo{
   display:flex;
+
+  justify-content:space-between;
+
   align-items:center;
+
+  padding:0 70px;
+
+  background:rgba(255,255,255,.96);
+
+  backdrop-filter:blur(10px);
+
+  border-bottom:1px solid #e8edf2;
+
 }
 
-.logo img{
+
+
+.logo {
+
+  display:flex;
+
+  align-items:center;
+
+}
+
+
+
+.logo img {
+
   display:block;
+
 }
 
-.navLinks{
+
+
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+
+.navLinks {
 
   display:flex;
+
   align-items:center;
+
   gap:42px;
 
 }
 
-.navLinks a{
+
+
+.navLinks a {
 
   position:relative;
 
@@ -52,13 +81,17 @@
 
 }
 
-.navLinks a:hover{
+
+
+.navLinks a:hover {
 
   color:#005B96;
 
 }
 
-.navLinks a::after{
+
+
+.navLinks a::after {
 
   content:"";
 
@@ -66,70 +99,236 @@
 
   left:0;
 
-  bottom:-8px;
+  bottom:-10px;
 
   width:0;
 
-  height:2px;
+  height:3px;
 
   background:#0E7490;
+
+  border-radius:999px;
 
   transition:.3s;
 
 }
 
-.navLinks a:hover::after{
+
+
+.navLinks a:hover::after {
 
   width:100%;
 
 }
 
-/* Active Page */
 
-.active{
+
+
+
+/* ACTIVE */
+
+.active {
 
   color:#005B96 !important;
 
+  font-weight:700;
+
 }
 
-.active::after{
+
+
+.active::after {
 
   width:100% !important;
 
 }
 
-/* Mobile */
 
-@media (max-width:768px){
 
-.navbar{
 
-padding:0 24px;
 
-height:72px;
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+
+.menuButton {
+
+  display:none;
+
+  width:44px;
+
+  height:44px;
+
+  border:none;
+
+  background:transparent;
+
+  cursor:pointer;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:6px;
+
+  padding:0;
 
 }
 
-.navLinks{
 
-display:none;
+
+.menuButton span {
+
+  display:block;
+
+  width:28px;
+
+  height:3px;
+
+  background:#005B96;
+
+  border-radius:3px;
+
+  transition:.3s;
 
 }
 
-}
-.navLinks a.active {
-  color: #0E7490;
-  font-weight: 700;
-  position: relative;
+
+
+.menuButton:hover span {
+
+  background:#0E7490;
+
 }
 
-.navLinks a.active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 100%;
-  height: 3px;
-  background: #0E7490;
-  border-radius: 999px;
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+
+.mobileMenu {
+
+  display:none;
+
+}
+
+
+
+.mobileMenuOpen {
+
+  display:none;
+
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:900px){
+
+
+  .navbar {
+
+    height:72px;
+
+    padding:0 24px;
+
+  }
+
+
+
+  .logo img {
+
+    width:170px !important;
+
+    height:auto !important;
+
+  }
+
+
+
+
+  .navLinks {
+
+    display:none;
+
+  }
+
+
+
+
+  .menuButton {
+
+    display:flex;
+
+  }
+
+
+
+
+  .mobileMenuOpen {
+
+    position:absolute;
+
+    top:72px;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+    padding:30px 24px;
+
+    gap:24px;
+
+    border-bottom:1px solid #e8edf2;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+  }
+
+
+
+  .mobileMenuOpen a {
+
+    color:#334155;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    padding-bottom:12px;
+
+    border-bottom:1px solid #edf2f7;
+
+  }
+
+
+
+  .mobileMenuOpen .active {
+
+    color:#005B96;
+
+  }
+
+
+
 }

@@ -3,59 +3,175 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 
-export default function Navbar() {
-  const pathname = usePathname();  
-  return (
-    <header className={styles.navbar} role="banner">
-      <div className={styles.logo}>
-        <Link href="/" aria-label="Seaspire Home">
-          <Image
-            src="/SEASPIRE-PHUKET-Logo-Color-300opx.webp"
-            alt="Seaspire Logo"
-            width={210}
-            height={70}
-            priority
-          />
-        </Link>
-      </div>
 
-      <nav
-        className={styles.navLinks}
-        aria-label="Main Navigation"
-      >
+export default function Navbar() {
+
+  const pathname = usePathname();
+
+  const [open, setOpen] = useState(false);
+
+
+
+  const menuItems = [
+
+    {
+      name:"Home",
+      href:"/"
+    },
+
+    {
+      name:"About",
+      href:"/about"
+    },
+
+    {
+      name:"Products",
+      href:"/products"
+    },
+
+    {
+      name:"Contact",
+      href:"/contact"
+    }
+
+  ];
+
+
+
+  return (
+
+    <header className={styles.navbar}>
+
+
+      <div className={styles.logo}>
+
         <Link
           href="/"
-          className={pathname === "/" ? styles.active : ""}
+          aria-label="Seaspire Home"
+          onClick={()=>setOpen(false)}
         >
-          Home
+
+          <Image
+
+            src="/SEASPIRE-PHUKET-Logo-Color-300opx.webp"
+
+            alt="Seaspire Logo"
+
+            width={210}
+
+            height={70}
+
+            priority
+
+          />
+
         </Link>
-        <Link
-          href="/about"
-          className={pathname === "/about" ? styles.active : ""}
-        >
-          About
-        </Link>
-        <Link
-          href="/products"
-          className={pathname === "/products" ? styles.active : ""}
-        >
-          Products
-        </Link>
-        <Link
-          href="/solutions"
-          className={pathname === "/solutions" ? styles.active : ""}
-        >
-          Solutions
-        </Link>
-        <Link
-          href="/contact"
-          className={pathname === "/contact" ? styles.active : ""}
-        >
-          Contact
-        </Link>
+
+      </div>
+
+
+
+
+      <nav className={styles.navLinks}>
+
+
+        {menuItems.map((item)=>(
+
+          <Link
+
+            key={item.href}
+
+            href={item.href}
+
+            className={
+              pathname === item.href
+              ? styles.active
+              : ""
+            }
+
+          >
+
+            {item.name}
+
+          </Link>
+
+        ))}
+
+
       </nav>
+
+
+
+
+
+      <button
+
+        className={styles.menuButton}
+
+        onClick={()=>setOpen(!open)}
+
+        aria-label="Toggle Menu"
+
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+
+
+
+      <div
+
+        className={
+          open
+          ? styles.mobileMenuOpen
+          : styles.mobileMenu
+        }
+
+      >
+
+        {menuItems.map((item)=>(
+
+
+          <Link
+
+            key={item.href}
+
+            href={item.href}
+
+            onClick={()=>setOpen(false)}
+
+            className={
+              pathname === item.href
+              ? styles.active
+              : ""
+            }
+
+          >
+
+            {item.name}
+
+          </Link>
+
+
+        ))}
+
+
+      </div>
+
+
+
     </header>
+
   );
+
 }
