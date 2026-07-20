@@ -1,4 +1,5 @@
 import { company } from "@/data";
+
 import styles from "@/styles/Footer.module.css";
 
 
@@ -6,7 +7,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
 
+
       <div className={styles.container}>
+
 
         <div className={styles.left}>
 
@@ -19,36 +22,57 @@ export default function Footer() {
         </div>
 
 
+
         <div className={styles.right}>
+
 
           <div className={styles.contactRow}>
 
+
             <p>
+
               <strong>Email</strong>
-              {company.contact.email}
+
+              <a href={`mailto:${company.contact.email}`}>
+                {company.contact.email}
+              </a>
+
             </p>
+
 
 
             <p>
+
               <strong>Tel</strong>
-              {company.contact.phone}
+
+              <a href={`tel:${company.contact.phone}`}>
+                {company.contact.phone}
+              </a>
+
             </p>
+
 
           </div>
 
 
-          <p className={styles.address}>
+
+
+          <address className={styles.address}>
 
             <strong>Address</strong>
 
             {company.address.full}
 
-          </p>
+          </address>
+
+
 
         </div>
 
 
       </div>
+
+
 
 
       <div className={styles.copyright}>

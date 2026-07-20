@@ -91,6 +91,8 @@ export default function Navbar() {
 
         aria-label="Toggle Menu"
 
+        aria-expanded={open}
+
       >
 
         <span></span>
@@ -105,7 +107,9 @@ export default function Navbar() {
 
 
 
-      <div
+      <nav
+
+        aria-label="Mobile Navigation"
 
         className={
           open
@@ -142,7 +146,7 @@ export default function Navbar() {
         ))}
 
 
-      </div>
+      </nav>
 
 
 

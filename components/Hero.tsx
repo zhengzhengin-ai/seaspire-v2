@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import styles from "../styles/Hero.module.css";
 
 
@@ -6,7 +7,10 @@ export default function Hero() {
 
   return (
 
-    <section className={styles.hero}>
+    <section
+      className={styles.hero}
+      aria-label="Seaspire introduction"
+    >
 
 
       <div className={styles.content}>
@@ -49,7 +53,10 @@ export default function Hero() {
 
 
 
-      <div className={styles.scroll}>
+      <div
+        className={styles.scroll}
+        aria-hidden="true"
+      >
         ↓ Scroll
       </div>
 

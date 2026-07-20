@@ -1,12 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
+
 import styles from "../styles/ProductCard.module.css";
+
 
 interface ProductCardProps {
   name: string;
+
   image: string;
+
   description: string;
+
   href?: string;
 }
+
 
 export default function ProductCard({
   name,
@@ -14,20 +21,34 @@ export default function ProductCard({
   description,
   href = "/products",
 }: ProductCardProps) {
+
   return (
     <article className={styles.card}>
+
+
       <div className={styles.imageWrapper}>
-        <img
+
+        <Image
           src={image}
           alt={name}
+          width={600}
+          height={400}
           className={styles.image}
         />
+
       </div>
 
+
+
       <div className={styles.content}>
+
+
         <h3>{name}</h3>
 
+
         <p>{description}</p>
+
+
 
         <Link
           href={href}
@@ -35,7 +56,11 @@ export default function ProductCard({
         >
           Learn More →
         </Link>
+
+
       </div>
+
+
     </article>
   );
 }

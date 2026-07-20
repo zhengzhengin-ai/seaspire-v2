@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import PageHero from "../../components/PageHero";
 import CTA from "../../components/CTA";
 import styles from "../../styles/AboutPage.module.css";
@@ -286,15 +288,19 @@ export default function AboutPage() {
         <div className={styles.productionImages}>
 
 
-          <img
+          <Image
             src="/images/production.webp"
             alt="Production Facility"
+            width={800}
+            height={600}
           />
 
 
-          <img
+          <Image
             src="/images/storage.webp"
             alt="Cold Storage Facility"
+            width={800}
+            height={600}
           />
 
 
