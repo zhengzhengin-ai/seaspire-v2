@@ -27,7 +27,7 @@ export default function Home() {
       <CTA
         tag="LET'S WORK TOGETHER"
         title={"YOUR TRUSTED\nSEAFOOD PARTNER"}
-        description="Reliable seafood supply with premium quality, stable sourcing and customized processing for customers worldwide."
+        description="Delivering premium seafood solutions with reliable sourcing, quality processing and flexible supply for global and local food service partners."
       />
 
     </main>

@@ -267,8 +267,8 @@ export default function ProductsPage() {
 
 
       <CTA
-        title={"LOOKING FOR A\nRELIABLE SEAFOOD SUPPLIER?"}
-        description="Contact our team today and discover premium seafood solutions tailored to your business."
+        title={"FIND THE RIGHT\nSEAFOOD SOLUTION"}
+        description="From fresh seafood to frozen products and customized processing, we provide solutions tailored to your business needs."
       />
 
 

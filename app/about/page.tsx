@@ -369,8 +369,8 @@ export default function AboutPage() {
 
 
       <CTA
-        title={"YOUR TRUSTED\nSEAFOOD PARTNER"}
-        description="Seaspire Phuket is committed to delivering premium seafood with reliable quality, stable supply and professional service for importers, distributors and food service customers around the world."
+        title={"BUILT ON QUALITY.\nDRIVEN BY TRUST."}
+        description="Combining seafood expertise, responsible sourcing and professional processing to support long-term partnerships with customers worldwide."
       />
 
 

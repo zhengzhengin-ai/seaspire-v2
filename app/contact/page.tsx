@@ -178,9 +178,9 @@ export default function ContactPage() {
 
       <CTA
 
-        title={"YOUR TRUSTED\nSEAFOOD PARTNER"}
+        title={"LET'S START\nA SEAFOOD PARTNERSHIP"}
 
-        description="Reliable seafood supply with premium quality, stable sourcing and customized processing for customers worldwide."
+        description="Contact Seaspire Phuket to discuss sourcing, products and customized seafood supply solutions."
 
       />
 

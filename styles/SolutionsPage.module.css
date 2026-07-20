@@ -1,0 +1,205 @@
+.section {
+  padding: 120px 80px;
+}
+
+
+.heading {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+
+.tag {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #0b6fa4;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+.heading h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #0b2239;
+}
+
+
+
+
+
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+
+.card {
+
+  padding: 40px 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  transition: transform .3s ease, box-shadow .3s ease;
+
+}
+
+
+.card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
+
+}
+
+
+.card h3 {
+
+  font-size: 24px;
+
+  margin-bottom: 18px;
+
+  color: #0b2239;
+
+}
+
+
+.card p {
+
+  line-height: 1.8;
+
+  color: #475569;
+
+}
+
+
+
+
+
+.capability {
+
+  padding: 120px 80px;
+
+  background: #f8fafc;
+
+}
+
+
+
+.capabilityGrid {
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+}
+
+
+
+.capabilityCard {
+
+  background: white;
+
+  padding: 45px 25px;
+
+  text-align: center;
+
+  border: 1px solid #e5e7eb;
+
+}
+
+
+
+.capabilityCard h3 {
+
+  font-size: 20px;
+
+  color: #0b2239;
+
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+
+
+  .section,
+  .capability {
+
+    padding: 90px 40px;
+
+  }
+
+
+  .grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+  .capabilityGrid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+
+}
+
+
+
+@media (max-width: 640px) {
+
+
+  .section,
+  .capability {
+
+    padding: 70px 20px;
+
+  }
+
+
+
+  .heading h2 {
+
+    font-size: 32px;
+
+  }
+
+
+
+  .grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+
+  .capabilityGrid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
+}
