@@ -1,126 +1,56 @@
-export interface Product {
-  id: string;
-  name: string;
-  image: string;
-  shortDescription: string;
-  forms: string[];
-}
+import { Product } from "../types/Product";
+
 
 export const products: Product[] = [
   {
-    id: "fresh-seafood",
-    name: "Fresh Seafood",
-    image: "/images/products/fresh.webp",
-    shortDescription:
-      "Premium fresh seafood supplied directly from trusted fishing sources.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "Steak",
+    id: "premium-seafood",
+
+    name: "Premium Seafood Products",
+
+    category: "Seafood Processing",
+
+    description:
+      "High quality seafood products processed with strict quality control and international food safety standards.",
+
+    image:
+      "/images/products/premium-seafood.webp",
+
+    features: [
+      "Quality controlled processing",
+      "Cold chain management",
+      "International export capability",
+    ],
+
+    applications: [
+      "Food Service",
+      "Retail",
+      "Global Distribution",
     ],
   },
 
   {
     id: "frozen-seafood",
-    name: "Frozen Seafood",
-    image: "/images/products/frozen.webp",
-    shortDescription:
-      "Professionally processed frozen seafood with reliable quality.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "HGT",
-    ],
-  },
 
-  {
-    id: "processed-seafood",
-    name: "Processed Seafood",
-    image: "/images/products/processed.webp",
-    shortDescription:
-      "Customized processing and packing based on customer requirements.",
-    forms: [
-      "Portion",
-      "Vacuum Pack",
-      "Retail Pack",
-    ],
-  },
+    name: "Frozen Seafood Solutions",
 
-  {
-    id: "thai-seafood",
-    name: "Thai Seafood",
-    image: "/images/products/thai.webp",
-    shortDescription:
-      "Selected premium seafood products from Thailand.",
-    forms: [
-      "Fresh",
-      "Frozen",
-      "Customized",
-    ],
-  },
+    category: "Frozen Seafood",
 
-  {
-    id: "frozen-tuna",
-    name: "Frozen Tuna",
-    image: "/images/frozen-tuna.webp",
-    shortDescription:
-      "Premium tuna processed under strict international food safety standards.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "HGT",
-    ],
-  },
+    description:
+      "Reliable frozen seafood solutions supporting global customers with consistent supply and quality.",
 
-  {
-    id: "salmon",
-    name: "Salmon",
-    image: "/images/salmon.webp",
-    shortDescription:
-      "Selected premium salmon with reliable cold-chain management.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "HGT",
-    ],
-  },
+    image:
+      "/images/products/frozen-seafood.webp",
 
-  {
-    id: "bluefin-tuna",
-    name: "Bluefin Tuna",
-    image: "/images/bluefin-tuna.webp",
-    shortDescription:
-      "High-grade Bluefin Tuna for premium international markets.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "HGT",
+    features: [
+      "Temperature controlled supply chain",
+      "Stable production capability",
+      "Global logistics support",
     ],
-  },
 
-  {
-    id: "hamachi",
-    name: "HAMACHI",
-    image: "/images/hamachi.webp",
-    shortDescription:
-      "Premium Hamachi processed according to customer specifications.",
-    forms: [
-      "Whole Fish",
-      "Fillet",
-      "HGT",
-    ],
-  },
-
-  {
-    id: "softshell-cuttlefish",
-    name: "Softshell Cuttlefish",
-    image: "/images/softshell-cuttlefish.webp",
-    shortDescription:
-      "Carefully selected softshell cuttlefish with stable year-round supply.",
-    forms: [
-      "Whole",
-      "Cleaned",
-      "Frozen",
+    applications: [
+      "Wholesale",
+      "Importers",
+      "Food Manufacturers",
     ],
   },
 ];

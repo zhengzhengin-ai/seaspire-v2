@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 import SectionHeading from "./SectionHeading";
-import { products } from "../data/products";
-import styles from "../styles/Products.module.css";
+import { products } from "@/data";
+import styles from "@/styles/Products.module.css";
 
 export default function Products() {
   return (
@@ -23,7 +23,7 @@ export default function Products() {
               key={product.id}
               name={product.name}
               image={product.image}
-              description={product.shortDescription}
+              description={product.description}
             />
           ))}
 

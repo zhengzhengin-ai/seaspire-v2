@@ -4,7 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import styles from "../styles/Navbar.module.css";
+
+import { navigation } from "@/constants";
+
+import styles from "@/styles/Navbar.module.css";
 
 
 export default function Navbar() {
@@ -12,33 +15,6 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const [open, setOpen] = useState(false);
-
-
-
-  const menuItems = [
-
-    {
-      name:"Home",
-      href:"/"
-    },
-
-    {
-      name:"About",
-      href:"/about"
-    },
-
-    {
-      name:"Products",
-      href:"/products"
-    },
-
-    {
-      name:"Contact",
-      href:"/contact"
-    }
-
-  ];
-
 
 
   return (
@@ -78,7 +54,7 @@ export default function Navbar() {
       <nav className={styles.navLinks}>
 
 
-        {menuItems.map((item)=>(
+        {navigation.map((item)=>(
 
           <Link
 
@@ -94,7 +70,7 @@ export default function Navbar() {
 
           >
 
-            {item.name}
+            {item.label}
 
           </Link>
 
@@ -139,7 +115,7 @@ export default function Navbar() {
 
       >
 
-        {menuItems.map((item)=>(
+        {navigation.map((item)=>(
 
 
           <Link
@@ -158,7 +134,7 @@ export default function Navbar() {
 
           >
 
-            {item.name}
+            {item.label}
 
           </Link>
 

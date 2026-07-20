@@ -1,4 +1,6 @@
-import styles from "../styles/Footer.module.css";
+import { company } from "@/data";
+import styles from "@/styles/Footer.module.css";
+
 
 export default function Footer() {
   return (
@@ -8,13 +10,14 @@ export default function Footer() {
 
         <div className={styles.left}>
 
-          <h2>SEASPIRE PHUKET</h2>
+          <h2>{company.name}</h2>
 
           <p className={styles.tagline}>
-            Premium Seafood Supplier from Phuket, Thailand
+            {company.tagline}
           </p>
 
         </div>
+
 
         <div className={styles.right}>
 
@@ -22,28 +25,38 @@ export default function Footer() {
 
             <p>
               <strong>Email</strong>
-              info@seaspirephuket.com
+              {company.contact.email}
             </p>
+
 
             <p>
               <strong>Tel</strong>
-              +66 76 222 977
+              {company.contact.phone}
             </p>
 
           </div>
 
+
           <p className={styles.address}>
+
             <strong>Address</strong>
-            64/222 Moo.7 T.Rasada, A. Muang, Phuket 83000, Thailand
+
+            {company.address.full}
+
           </p>
 
         </div>
 
+
       </div>
 
+
       <div className={styles.copyright}>
-        © 2026 Seaspire Phuket Co., Ltd. All Rights Reserved.
+
+        © 2026 {company.name}. All Rights Reserved.
+
       </div>
+
 
     </footer>
   );
