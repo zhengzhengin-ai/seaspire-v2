@@ -18,12 +18,12 @@ export default function Products() {
 
         <div className={styles.grid}>
 
-          {products.slice(0, 4).map((product) => (
+          {products.slice(0, 5).map((product) => (
             <ProductCard
               key={product.id}
               name={product.name}
               image={product.image}
-              description={product.description}
+              variant="landing"
             />
           ))}
 

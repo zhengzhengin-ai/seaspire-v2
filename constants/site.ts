@@ -3,17 +3,43 @@ export const siteConfig = {
 
   url:
     process.env.NEXT_PUBLIC_SITE_URL ||
-    "https://www.seaspire.com",
+    "https://www.seaspirephuket.com",
 
   description:
-    "Premium seafood solutions from Thailand with integrated processing and international supply chain capabilities.",
+    "Premium seafood supplier in Phuket, Thailand specializing in fresh and frozen seafood, OEM processing, cold chain logistics and global supply solutions for importers, restaurants and hotels.",
 
   keywords: [
+
+    "Seafood Supplier Thailand",
+
+    "Seafood Supplier Phuket",
+
+    "Frozen Seafood Exporter",
+
+    "Fresh Seafood Supplier",
+
+    "Frozen Tuna Supplier",
+
+    "Salmon Supplier",
+
     "Seafood Processing",
-    "Frozen Seafood",
+
+    "OEM Seafood Processing",
+
+    "Restaurant Seafood Supply",
+
+    "Hotel Seafood Supply",
+
+    "Food Service Seafood",
+
+    "Seafood Import",
+
     "Thailand Seafood",
-    "Seafood Export",
-    "Global Supply Chain",
+
+    "Phuket Seafood",
+
+    "Seafood Export Thailand",
+
   ],
 
   language: "en",

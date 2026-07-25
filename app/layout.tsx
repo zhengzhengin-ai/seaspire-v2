@@ -28,7 +28,14 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
+
+  title: {
+
+    default: siteConfig.name,
+
+    template: "%s | SEASPIRE PHUKET",
+
+  },
 
   description: siteConfig.description,
 
@@ -37,6 +44,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
   openGraph: {
+
     title: siteConfig.name,
 
     description: siteConfig.description,
@@ -48,7 +56,27 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
 
     type: "website",
+
   },
+
+  twitter: {
+
+    card: "summary_large_image",
+
+    title: siteConfig.name,
+
+    description: siteConfig.description,
+
+  },
+
+  robots: {
+
+    index: true,
+
+    follow: true,
+
+  },
+
 };
 
 
@@ -66,6 +94,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
 

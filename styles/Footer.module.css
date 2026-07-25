@@ -16,7 +16,7 @@
 
   margin:0 auto;
 
-  padding:38px 40px 24px;
+  padding:10px 20px 10px;
 
   display:flex;
 
@@ -40,7 +40,7 @@
 
 .left h2 {
 
-  margin:0 0 10px;
+  margin:0 0 1px;
 
   color:#ffffff;
 
@@ -82,7 +82,7 @@
 
   gap:48px;
 
-  margin-bottom:10px;
+  margin-bottom:1px;
 
 }
 
@@ -112,7 +112,7 @@
 
   font-size:16px;
 
-  line-height:1.7;
+  line-height:2.7;
 
   overflow-wrap:anywhere;
 

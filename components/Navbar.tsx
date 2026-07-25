@@ -31,17 +31,15 @@ export default function Navbar() {
         >
 
           <Image
-
             src="/SEASPIRE-PHUKET-Logo-Color-300opx.webp"
-
             alt="Seaspire Logo"
-
-            width={210}
-
-            height={70}
-
+            width={300}
+            height={80}
             priority
-
+            style={{
+              width: "210px",
+              height: "auto",
+            }}
           />
 
         </Link>

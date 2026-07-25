@@ -1,0 +1,2383 @@
+# Seaspire v2 Official Website
+
+# Project Specification
+
+**Version:** 2.0 (Draft)
+**Project:** Seaspire v2 Official Website
+**Framework:** Next.js App Router
+**Language:** TypeScript
+**Styling:** CSS Modules
+**Status:** Official Development Standard (Draft)
+
+---
+
+# 1. Project Overview
+
+## 1.1 Purpose
+
+Seaspire v2 is the official corporate website of Seaspire.
+
+The website represents the company's:
+
+* Corporate identity
+* Product capabilities
+* Manufacturing strengths
+* International business credibility
+* Customer communication channels
+
+The website is designed primarily for B2B seafood buyers, importers, restaurant groups and food service partners.
+
+---
+
+## 1.2 Primary Goals
+
+The project is designed around the following objectives.
+
+### Professional Branding
+
+Build a modern corporate image suitable for international seafood trading.
+
+### Product Presentation
+
+Present seafood products with consistent visual quality.
+
+### Business Trust
+
+Strengthen customer confidence through professional design, certifications and company information.
+
+### Scalability
+
+Maintain an architecture suitable for long-term expansion.
+
+### SEO
+
+Provide an SEO-ready foundation before deployment.
+
+### Future Expansion
+
+Prepare for future CMS integration, multilingual support and digital marketing.
+
+---
+
+## 1.3 Development Philosophy
+
+Seaspire v2 follows several core principles.
+
+### Architecture First
+
+A stable architecture is more important than rapid feature development.
+
+### Consistency First
+
+Consistency always has higher priority than visual creativity.
+
+### Reusability
+
+Reusable components should be preferred whenever possible.
+
+### Maintainability
+
+Every decision should reduce future maintenance costs.
+
+### Simplicity
+
+Avoid unnecessary complexity.
+
+---
+
+# 2. Technology Stack
+
+## Frontend
+
+Framework
+
+* Next.js App Router
+
+Language
+
+* TypeScript
+
+Styling
+
+* CSS Modules
+
+Image
+
+* Next.js Image
+
+Navigation
+
+* Next.js Link
+
+Fonts
+
+* next/font
+
+---
+
+## Development Environment
+
+Node.js
+
+Version
+
+24+
+
+Package Manager
+
+npm
+
+Version Control
+
+Git
+
+Repository
+
+GitHub
+
+Deployment
+
+Vercel
+
+---
+
+## Build Requirement
+
+Every modification must pass
+
+```bash
+npm run build
+```
+
+before acceptance.
+
+Build failure blocks further development.
+
+---
+
+# 3. Project Architecture
+
+The project adopts a layered architecture.
+
+```
+Presentation Layer
+
+↓
+
+Shared Components
+
+↓
+
+Business Data
+
+↓
+
+Constants
+
+↓
+
+Utilities
+
+↓
+
+Types
+
+↓
+
+Framework
+```
+
+---
+
+## Architecture Layers
+
+### Presentation
+
+Located under
+
+```
+app/
+```
+
+Responsible for
+
+* Pages
+* Layout
+* Routing
+
+---
+
+### Components
+
+Located under
+
+```
+components/
+```
+
+Responsible for
+
+* Shared UI
+* Reusable modules
+* Common interactions
+
+---
+
+### Data Layer
+
+Located under
+
+```
+data/
+```
+
+Responsible for
+
+* Products
+* Company
+* Applications
+* Future CMS replacement
+
+---
+
+### Constants
+
+Located under
+
+```
+constants/
+```
+
+Responsible for
+
+* Navigation
+* Site configuration
+* Shared values
+
+---
+
+### Types
+
+Located under
+
+```
+types/
+```
+
+Responsible for
+
+* TypeScript interfaces
+* Shared models
+
+---
+
+### Utilities
+
+Located under
+
+```
+lib/
+```
+
+Responsible for
+
+* Structured Data
+* SEO helpers
+* Utility functions
+
+---
+
+# 4. Development Principles
+
+The following principles are mandatory.
+
+## 4.1 Architecture First
+
+Architecture should remain stable.
+
+Do not redesign architecture unless necessary.
+
+---
+
+## 4.2 Component Reuse
+
+Always reuse existing components before creating new ones.
+
+Examples
+
+* Hero
+* CTA
+* SectionHeading
+* ContentCard
+* ProductCard
+
+---
+
+## 4.3 One Responsibility
+
+One component should have one responsibility.
+
+Avoid multi-purpose components.
+
+---
+
+## 4.4 Separation of Concerns
+
+Separate
+
+* Data
+* UI
+* Business logic
+* Styling
+
+whenever possible.
+
+---
+
+## 4.5 Build Verification
+
+Every completed task requires
+
+```
+npm run build
+```
+
+Only Build SUCCESS allows progression to the next task.
+
+---
+
+## 4.6 Incremental Development
+
+Development order:
+
+```
+Specification
+
+↓
+
+Architecture
+
+↓
+
+Development
+
+↓
+
+Build
+
+↓
+
+UI Acceptance
+
+↓
+
+Git Commit
+
+↓
+
+Freeze
+```
+
+---
+
+# 5. Folder Structure
+
+```
+app/
+
+├── page.tsx
+├── about/
+├── products/
+├── solutions/
+├── contact/
+├── layout.tsx
+└── globals.css
+
+components/
+
+├── Navbar.tsx
+├── Footer.tsx
+├── Hero.tsx
+├── PageHero.tsx
+├── CTA.tsx
+├── SectionHeading.tsx
+├── ProductShowcase.tsx
+├── ProductCard.tsx
+├── ContentCard.tsx
+
+constants/
+
+├── navigation.ts
+├── site.ts
+
+data/
+
+├── company.ts
+├── products.ts
+├── applications.ts
+
+lib/
+
+├── structuredData.ts
+├── utils.ts
+
+types/
+
+├── Product.ts
+├── Company.ts
+├── Application.ts
+
+styles/
+
+├── Navbar.module.css
+├── Footer.module.css
+├── Hero.module.css
+├── PageHero.module.css
+├── CTA.module.css
+├── SectionHeading.module.css
+├── ProductCard.module.css
+├── ContentCard.module.css
+
+public/
+
+images/
+
+├── hero/
+├── products/
+├── solutions/
+├── about/
+├── company/
+└── certifications/
+```
+
+
+---
+
+# 6. Coding Standards
+
+## 6.1 General Principles
+
+The following coding principles apply throughout the entire project.
+
+### Readability
+
+Code should be easy to understand.
+
+Avoid unnecessary complexity.
+
+---
+
+### Consistency
+
+Maintain a consistent coding style across the project.
+
+Naming, spacing, formatting and file organization should follow the same standard.
+
+---
+
+### Reusability
+
+Duplicate code should be avoided.
+
+Shared logic must be extracted into reusable components or utilities.
+
+---
+
+### Maintainability
+
+Code should be written for long-term maintenance rather than short-term convenience.
+
+---
+
+### Scalability
+
+Every implementation should consider future expansion.
+
+Examples include:
+
+* CMS integration
+* Additional languages
+* New products
+* New pages
+
+---
+
+## 6.2 TypeScript
+
+Always define interfaces whenever possible.
+
+Example responsibilities include:
+
+* Product
+* Company
+* Navigation
+* Application
+
+Avoid using
+
+```text
+any
+```
+
+unless absolutely necessary.
+
+---
+
+## 6.3 File Naming
+
+Component
+
+```text
+Navbar.tsx
+
+Footer.tsx
+
+SectionHeading.tsx
+```
+
+Page
+
+```text
+page.tsx
+```
+
+CSS Module
+
+```text
+Navbar.module.css
+
+Footer.module.css
+```
+
+Type
+
+```text
+Product.ts
+
+Company.ts
+```
+
+Data
+
+```text
+products.ts
+
+company.ts
+```
+
+---
+
+## 6.4 Import Order
+
+Imports should follow this order.
+
+```text
+Next.js
+
+↓
+
+Third-party packages
+
+↓
+
+Components
+
+↓
+
+Data
+
+↓
+
+Constants
+
+↓
+
+Types
+
+↓
+
+Styles
+```
+
+---
+
+## 6.5 Component Structure
+
+Recommended order.
+
+```text
+Imports
+
+↓
+
+Types
+
+↓
+
+Data
+
+↓
+
+Component
+
+↓
+
+Return JSX
+
+↓
+
+Export
+```
+
+---
+
+## 6.6 Naming Convention
+
+Component
+
+```text
+PascalCase
+```
+
+Variables
+
+```text
+camelCase
+```
+
+Constants
+
+```text
+UPPER_CASE
+```
+
+CSS Classes
+
+```text
+camelCase
+```
+
+Folders
+
+```text
+lowercase
+```
+
+---
+
+# 7. Component Architecture
+
+## Philosophy
+
+Shared UI should always be implemented as reusable components.
+
+Pages should focus on layout rather than UI implementation.
+
+---
+
+## Shared Components
+
+Current shared components include.
+
+### Navbar
+
+Responsibilities
+
+* Desktop navigation
+* Mobile navigation
+* Active menu
+* Responsive behavior
+
+---
+
+### Footer
+
+Responsibilities
+
+* Company information
+* Contact details
+* Copyright
+* Social links
+
+---
+
+### Hero
+
+Responsibilities
+
+Homepage hero section.
+
+Contains
+
+* Title
+* Subtitle
+* CTA
+* Background image
+
+---
+
+### PageHero
+
+Responsibilities
+
+Internal page hero.
+
+Supports
+
+* Background image
+* Overlay
+* Title
+* Subtitle
+* Description
+
+---
+
+### CTA
+
+Responsibilities
+
+Business conversion.
+
+Supports
+
+* Title
+* Description
+* Button
+
+---
+
+### SectionHeading
+
+Responsibilities
+
+Unified section heading.
+
+Supports
+
+* Tag
+* Accent line
+* Title
+* Subtitle
+* Alignment
+
+Used by
+
+* Home
+* About
+* Products
+* Solutions
+* Contact
+
+---
+
+### ProductShowcase
+
+Responsibilities
+
+Homepage featured products.
+
+---
+
+### ProductCard
+
+Responsibilities
+
+Homepage product presentation.
+
+Landing page only.
+
+Supports
+
+* Image
+* Overlay
+* Hover Zoom
+* Title
+
+No description.
+
+---
+
+### ContentCard
+
+Responsibilities
+
+Content pages.
+
+Used by
+
+* Products
+* Future pages
+
+Supports
+
+* Image
+* Title
+* Description
+
+---
+
+# 8. Component Rules
+
+## One Component
+
+One responsibility.
+
+Never combine multiple business purposes into one component.
+
+---
+
+## Shared Component First
+
+Before creating a new component,
+
+always evaluate whether an existing component can be reused.
+
+---
+
+## Shared Components
+
+Shared components include.
+
+```text
+Navbar
+
+Footer
+
+Hero
+
+PageHero
+
+CTA
+
+SectionHeading
+
+ProductCard
+
+ContentCard
+```
+
+---
+
+## Page Components
+
+Page-specific layouts should remain inside
+
+```text
+app/
+```
+
+They should not be promoted into shared components unless reused.
+
+---
+
+## Component Communication
+
+Data should flow downward.
+
+```text
+Page
+
+↓
+
+Component
+
+↓
+
+Child Component
+```
+
+Avoid unnecessary deep prop drilling.
+
+---
+
+# 9. Component Freeze Policy
+
+After UI acceptance,
+
+shared components become frozen.
+
+Current frozen components.
+
+```text
+Navbar
+
+Footer
+
+Hero
+
+PageHero
+
+CTA
+
+SectionHeading
+```
+
+Components under observation.
+
+```text
+ProductCard
+
+ContentCard
+```
+
+These may continue to receive refinements until full project UI acceptance.
+
+---
+
+## Modification Rules
+
+Shared components should only be modified when.
+
+* The change benefits the entire website.
+* The change improves maintainability.
+* The change is requested by project owner.
+
+Otherwise,
+
+page-level adjustments should be preferred.
+
+---
+
+## Asset First Principle
+
+Whenever possible,
+
+modify image assets instead of component dimensions.
+
+Priority order.
+
+```text
+Image
+
+↓
+
+Content
+
+↓
+
+Page CSS
+
+↓
+
+Shared Component
+```
+
+Shared components should be the last option.
+
+---
+
+## Layout Stability
+
+Layouts should remain stable.
+
+Images should adapt to layouts,
+
+not the opposite.
+
+---
+
+
+
+```txt
+# 10. UI Design System
+
+The UI Design System defines the visual language of Seaspire v2.
+
+Every page should follow the same design principles.
+
+Consistency has higher priority than creativity.
+
+---
+
+# 10.1 Design Philosophy
+
+The website follows a modern B2B corporate style.
+
+Characteristics
+
+• Professional
+
+• Clean
+
+• Spacious
+
+• Trustworthy
+
+• International
+
+• Premium
+
+Avoid
+
+• Decorative effects
+
+• Excessive animations
+
+• Heavy shadows
+
+• Overly colorful interfaces
+
+---
+
+# 10.2 Color System
+
+Primary
+
+#005B96
+
+Used for
+
+• Headings
+
+• Buttons
+
+• Links
+
+• Active navigation
+
+----------------------------------
+
+Primary Dark
+
+#003B5C
+
+Used for
+
+• Hover titles
+
+• Secondary headings
+
+----------------------------------
+
+Accent
+
+#D98C1F
+
+Used for
+
+• Section accent line
+
+• Highlight
+
+• CTA emphasis
+
+----------------------------------
+
+Background
+
+#FFFFFF
+
+Main content sections
+
+----------------------------------
+
+Secondary Background
+
+#F8FBFD
+
+Alternating sections
+
+----------------------------------
+
+Border
+
+#E5EEF4
+
+Cards
+
+Inputs
+
+Separators
+
+----------------------------------
+
+Text Primary
+
+#1E293B
+
+Main content
+
+----------------------------------
+
+Text Secondary
+
+#64748B
+
+Paragraphs
+
+Descriptions
+
+Supporting text
+
+----------------------------------
+
+Success
+
+#14B8A6
+
+Hover interaction
+
+Links
+
+Buttons
+
+---
+
+# 10.3 Typography
+
+Heading H1
+
+56px
+
+Bold
+
+Uppercase
+
+Desktop only
+
+----------------------------------
+
+Heading H2
+
+48px
+
+Bold
+
+Primary Blue
+
+----------------------------------
+
+Heading H3
+
+28~32px
+
+Semi Bold
+
+----------------------------------
+
+Section Tag
+
+16px
+
+Bold
+
+Uppercase
+
+Letter spacing
+
+4px
+
+----------------------------------
+
+Body
+
+18px
+
+Line-height
+
+1.9
+
+Color
+
+#64748B
+
+----------------------------------
+
+Small Text
+
+16px
+
+Used for
+
+Navigation
+
+Buttons
+
+Supporting text
+
+---
+
+# 10.4 Section Heading Specification
+
+All section headings should use
+
+SectionHeading Component.
+
+Structure
+
+TAG
+
+↓
+
+Accent Line
+
+↓
+
+Title
+
+↓
+
+Subtitle (Optional)
+
+Never recreate headings manually.
+
+Always reuse
+
+SectionHeading.
+
+---
+
+# 10.5 Section Spacing
+
+Desktop
+
+Top
+
+120px
+
+Bottom
+
+120px
+
+----------------------------------
+
+Tablet
+
+100px
+
+----------------------------------
+
+Mobile
+
+80px
+
+Horizontal
+
+24px
+
+---
+
+# 10.6 Grid System
+
+Desktop Container
+
+Maximum Width
+
+1400px
+
+----------------------------------
+
+Standard Content
+
+1100px
+
+----------------------------------
+
+Text Content
+
+760px
+
+----------------------------------
+
+Cards
+
+Gap
+
+28~32px
+
+---
+
+# 10.7 Card Design
+
+Cards should remain consistent.
+
+Structure
+
+Image
+
+↓
+
+Content
+
+↓
+
+Title
+
+↓
+
+Description
+
+↓
+
+Link (Optional)
+
+----------------------------------
+
+Corner Radius
+
+18px
+
+----------------------------------
+
+Border
+
+1px
+
+#E5EEF4
+
+----------------------------------
+
+Shadow
+
+Soft
+
+Corporate
+
+----------------------------------
+
+Hover
+
+Lift
+
+6~8px
+
+Soft shadow increase
+
+No aggressive animation
+
+---
+
+# 10.8 Hero Design
+
+Hero sections should follow one standard.
+
+Contains
+
+Background Image
+
+↓
+
+Overlay
+
+↓
+
+Subtitle
+
+↓
+
+Title
+
+↓
+
+Description
+
+↓
+
+CTA
+
+----------------------------------
+
+Overlay
+
+Dark Gradient
+
+Ensure text readability.
+
+Avoid opaque overlays.
+
+----------------------------------
+
+Height
+
+Desktop
+
+Approximately
+
+70vh
+
+Internal Pages
+
+50~60vh
+
+---
+
+# 10.9 CTA Design
+
+CTA sections are shared.
+
+Always use
+
+CTA Component.
+
+Contains
+
+Headline
+
+↓
+
+Description
+
+↓
+
+Button
+
+Background
+
+Corporate Blue
+
+White Typography
+
+---
+
+# 10.10 Image Overlay
+
+Overlay should only improve readability.
+
+Do not hide image details.
+
+Opacity
+
+Approximately
+
+35~50%
+
+depending on image brightness.
+
+---
+
+# 10.11 Hover Interaction
+
+Hover should remain subtle.
+
+Recommended
+
+Image Zoom
+
+1.03~1.05
+
+Card Lift
+
+6~8px
+
+Shadow Increase
+
+Color Transition
+
+Avoid
+
+Large movement
+
+Rotation
+
+Bounce animation
+
+Flash effects
+
+---
+
+# 10.12 Responsive Design
+
+Desktop First
+
+Breakpoints
+
+1200px
+
+↓
+
+992px
+
+↓
+
+768px
+
+↓
+
+576px
+
+Layout changes should only occur when necessary.
+
+Avoid redesigning layouts between breakpoints.
+
+Maintain visual consistency across devices.
+
+---
+
+# 10.13 Visual Consistency
+
+All pages should appear as one unified corporate website.
+
+Maintain consistency in
+
+• Typography
+
+• Colors
+
+• Card design
+
+• Section spacing
+
+• Heading hierarchy
+
+• Hover interaction
+
+• Image style
+
+Future pages must inherit this Design System.
+
+Never create page-specific visual languages unless explicitly approved.
+```
+
+
+
+```txt
+# 11. Image Specification
+
+Images are part of the design system.
+
+Components define the layout.
+
+Images must be created to fit the components.
+
+Never modify component dimensions simply to accommodate an image.
+
+---
+
+# 11.1 Asset First Principle
+
+Priority
+
+Image Asset
+
+↓
+
+Content
+
+↓
+
+Page-specific CSS
+
+↓
+
+Shared Component
+
+↓
+
+Architecture
+
+Whenever possible,
+
+modify image assets instead of changing reusable components.
+
+Reason
+
+• Better consistency
+
+• Lower maintenance cost
+
+• Easier future expansion
+
+• Stable UI
+
+---
+
+# 11.2 Image Quality
+
+Minimum Format
+
+WebP
+
+Resolution
+
+High Quality
+
+Compression
+
+Optimized for Web
+
+Images should remain sharp on
+
+Desktop
+
+Tablet
+
+Mobile
+
+Avoid
+
+• Pixelated images
+
+• Watermarks
+
+• Artificial stretching
+
+• Visible compression artifacts
+
+---
+
+# 11.3 Image Folder Structure
+
+public/
+
+images/
+
+├── hero/
+├── products/
+├── solutions/
+├── about/
+├── company/
+├── certifications/
+├── icons/
+└── logos/
+
+Each folder should only contain one image category.
+
+---
+
+# 11.4 File Naming
+
+Use lowercase.
+
+Separate words using hyphens.
+
+Correct
+
+fresh-seafood.webp
+
+frozen-tuna.webp
+
+about-hero.webp
+
+products-hero.webp
+
+Incorrect
+
+FreshSeafood.jpg
+
+Product01.PNG
+
+Image.webp
+
+---
+
+# 11.5 Hero Images
+
+Purpose
+
+Homepage Hero
+
+Page Hero
+
+Recommended Size
+
+1920 × 1080 px
+
+Ratio
+
+16 : 9
+
+Composition
+
+Subject centered
+
+Leave safe area for heading text.
+
+Avoid placing important objects behind titles.
+
+Background should support readability.
+
+---
+
+# 11.6 Homepage Product Cards
+
+Section
+
+Featured Products
+
+Image Size
+
+1200 × 900 px
+
+Ratio
+
+4 : 3
+
+Composition
+
+Subject centered
+
+Fill approximately
+
+65~75%
+
+of image.
+
+Leave comfortable margins.
+
+Avoid touching image edges.
+
+Purpose
+
+Quick visual recognition.
+
+---
+
+# 11.7 Products Page Cards
+
+Section
+
+Main Products
+
+Image Size
+
+900 × 1200 px
+
+Ratio
+
+3 : 4
+
+Composition
+
+Subject positioned slightly above center.
+
+Bottom Safe Area
+
+15~20%
+
+No important object should touch
+
+Top
+
+Bottom
+
+Left
+
+Right
+
+Purpose
+
+Product presentation with description.
+
+The card layout must remain fixed.
+
+Images should be adjusted instead of modifying the card.
+
+---
+
+# 11.8 Solutions Cards
+
+Section
+
+Who We Serve
+
+Image Size
+
+900 × 1200 px
+
+Ratio
+
+3 : 4
+
+Use the same composition rules as Products Cards.
+
+Purpose
+
+Business category presentation.
+
+---
+
+# 11.9 About Images
+
+Purpose
+
+Company introduction
+
+Facilities
+
+Manufacturing
+
+Storage
+
+Recommended Size
+
+1600 × 900 px
+
+Ratio
+
+16 : 9
+
+Maintain natural perspective.
+
+Avoid excessive cropping.
+
+---
+
+# 11.10 Image Composition
+
+Recommended Composition
+
+Top Safe Area
+
+10%
+
+Subject Area
+
+Approximately
+
+70%
+
+Bottom Safe Area
+
+20%
+
+Example
+
+□□□□□□□□□□□□
+
+      Safe Area
+
+████████████
+
+      Subject
+
+████████████
+
+████████████
+
+□□□□□□□□□□□□
+
+     Safe Area
+
+No important object should be cropped.
+
+---
+
+# 11.11 Overlay Images
+
+Overlay should improve readability.
+
+Do not hide image details.
+
+Recommended Opacity
+
+35~50%
+
+Gradient overlays are preferred over solid overlays.
+
+---
+
+# 11.12 Image Hover
+
+Recommended
+
+Zoom
+
+1.03
+
+to
+
+1.05
+
+Avoid
+
+Rotation
+
+Blur
+
+Heavy filters
+
+Flash effects
+
+---
+
+# 11.13 Image Consistency
+
+Images across the website should maintain
+
+• Similar brightness
+
+• Similar contrast
+
+• Similar saturation
+
+• Similar composition
+
+The website should appear as though all images belong to the same visual identity.
+
+---
+
+# 11.14 Future Asset Standard
+
+Whenever new products are added,
+
+new images should follow this specification.
+
+Never redesign existing components because of newly added images.
+
+Image assets should always adapt to the established UI.
+
+---
+
+# 11.15 Image Review Checklist
+
+Before importing any image,
+
+confirm
+
+✓ Correct ratio
+
+✓ Correct resolution
+
+✓ Correct composition
+
+✓ Safe Area preserved
+
+✓ Optimized WebP format
+
+✓ Consistent visual style
+
+✓ Suitable for desktop and mobile
+
+Only approved assets should enter the project repository.
+```
+
+---
+
+
+---
+
+```txt
+# 12. CSS Specification
+
+The CSS architecture should remain modular,
+predictable and easy to maintain.
+
+CSS Modules are mandatory throughout the project.
+
+Global CSS should only contain global resets,
+variables and utility styles.
+
+---
+
+# 12.1 CSS Architecture
+
+Priority
+
+Global CSS
+
+↓
+
+Shared Component CSS
+
+↓
+
+Page CSS
+
+↓
+
+Element CSS
+
+Shared styles should never be overridden by
+page-specific styles unless absolutely necessary.
+
+---
+
+# 12.2 CSS Modules
+
+Every reusable component should have its own
+CSS Module.
+
+Example
+
+Navbar.module.css
+
+Footer.module.css
+
+CTA.module.css
+
+SectionHeading.module.css
+
+ContentCard.module.css
+
+ProductCard.module.css
+
+Never place reusable component styles inside
+page CSS.
+
+---
+
+# 12.3 CSS Scope
+
+Selectors should remain as specific as necessary.
+
+Avoid broad selectors.
+
+Incorrect
+
+.aboutContent p
+
+.products div
+
+.card h3
+
+Correct
+
+.aboutText
+
+.processingText
+
+.qualityText
+
+.cardTitle
+
+.cardDescription
+
+Reason
+
+Specific selectors improve
+
+• Readability
+
+• Maintainability
+
+• Reusability
+
+---
+
+# 12.4 Page CSS
+
+Page CSS should only define
+
+Layout
+
+Spacing
+
+Grid
+
+Page-specific sections
+
+Page CSS should not redefine shared components.
+
+Examples
+
+ProductsPage.module.css
+
+AboutPage.module.css
+
+SolutionsPage.module.css
+
+---
+
+# 12.5 Shared Component CSS
+
+Shared component appearance should be centralized.
+
+Examples
+
+Navbar
+
+Footer
+
+CTA
+
+SectionHeading
+
+Hero
+
+ContentCard
+
+ProductCard
+
+Avoid duplicating styles.
+
+---
+
+# 12.6 Typography
+
+Typography should inherit from the Design System.
+
+Do not redefine typography repeatedly.
+
+Incorrect
+
+font-size
+
+font-weight
+
+line-height
+
+inside every page.
+
+Instead,
+
+reuse shared component styles.
+
+---
+
+# 12.7 Color Usage
+
+Colors should only use values defined
+by the Design System.
+
+Avoid random hexadecimal values.
+
+Preferred
+
+Primary Blue
+
+#005B96
+
+Primary Dark
+
+#003B5C
+
+Accent
+
+#D98C1F
+
+Background
+
+#FFFFFF
+
+Secondary Background
+
+#F8FBFD
+
+Text
+
+#64748B
+
+---
+
+# 12.8 Layout Rules
+
+Maximum Content Width
+
+1400px
+
+Standard Content
+
+1100px
+
+Reading Width
+
+760px
+
+Spacing
+
+Desktop
+
+120px
+
+Tablet
+
+100px
+
+Mobile
+
+80px
+
+Maintain consistency.
+
+---
+
+# 12.9 Card Rules
+
+Cards should follow one standard.
+
+Corner Radius
+
+18px
+
+Border
+
+1px
+
+Soft Shadow
+
+Hover Lift
+
+6~8px
+
+Transition
+
+0.35s
+
+Avoid redesigning cards for individual pages.
+
+---
+
+# 12.10 Hover Effects
+
+Hover interactions should remain subtle.
+
+Recommended
+
+Image Zoom
+
+1.03~1.05
+
+Shadow Increase
+
+Title Color Transition
+
+Avoid
+
+Rotation
+
+Bounce
+
+Large Movement
+
+Flash
+
+---
+
+# 12.11 Responsive Rules
+
+Desktop First
+
+Recommended Breakpoints
+
+1200px
+
+992px
+
+768px
+
+576px
+
+Only modify layouts when necessary.
+
+Typography should remain visually consistent.
+
+---
+
+# 12.12 CSS Naming
+
+Class Names
+
+camelCase
+
+Examples
+
+sectionTag
+
+cardTitle
+
+processingGrid
+
+qualityCard
+
+Avoid
+
+style1
+
+box2
+
+titleNew
+
+Meaningful names improve maintainability.
+
+---
+
+# 12.13 Duplicate Styles
+
+Before creating new CSS,
+
+verify whether the style already exists.
+
+Priority
+
+Reuse
+
+↓
+
+Extend
+
+↓
+
+Create New
+
+Avoid duplicate implementations.
+
+---
+
+# 12.14 CSS Maintenance
+
+One issue
+
+↓
+
+One file
+
+↓
+
+Build
+
+↓
+
+Acceptance
+
+↓
+
+Git Commit
+
+Avoid modifying multiple CSS files
+for a single visual issue.
+
+---
+
+# 12.15 CSS Freeze
+
+After a shared component has been accepted,
+
+its CSS becomes frozen.
+
+Future adjustments should be performed by
+
+Content
+
+Images
+
+Page-specific Layout
+
+instead of modifying shared component styles.
+
+Exceptions
+
+Major redesign
+
+Project owner request
+
+Architecture improvement
+
+---
+
+# 12.16 CSS Review Checklist
+
+Before committing,
+
+confirm
+
+✓ CSS Module used
+
+✓ No duplicated styles
+
+✓ Responsive verified
+
+✓ Build SUCCESS
+
+✓ Shared Component unaffected
+
+✓ Naming follows convention
+
+✓ Design System preserved
+
+Only then should the modification
+be accepted.
+```
+
+---
+
+

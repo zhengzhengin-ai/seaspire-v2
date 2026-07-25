@@ -1,6 +1,7 @@
 import { company } from "@/data";
 import { siteConfig } from "@/constants";
 
+const primaryLocation = company.locations[0];
 
 export function organizationSchema() {
   return {
@@ -17,25 +18,24 @@ export function organizationSchema() {
 
     description: company.description,
 
-    email: company.contact.email,
+    email: company.email,
 
-    telephone: company.contact.phone,
+    telephone: primaryLocation.phone,
 
     address: {
       "@type": "PostalAddress",
 
-      streetAddress: company.address.full,
+      streetAddress: primaryLocation.address,
+
+      addressCountry: company.business.location,
     },
 
     sameAs: [
       company.social.linkedin,
-
       company.social.facebook,
     ].filter(Boolean),
   };
 }
-
-
 
 export function localBusinessSchema() {
   return {
@@ -52,14 +52,14 @@ export function localBusinessSchema() {
 
     description: company.description,
 
-    telephone: company.contact.phone,
+    telephone: primaryLocation.phone,
 
-    email: company.contact.email,
+    email: company.email,
 
     address: {
       "@type": "PostalAddress",
 
-      streetAddress: company.address.full,
+      streetAddress: primaryLocation.address,
 
       addressCountry: company.business.location,
     },
@@ -70,7 +70,6 @@ export function localBusinessSchema() {
 
     sameAs: [
       company.social.linkedin,
-
       company.social.facebook,
     ].filter(Boolean),
   };

@@ -1,184 +1,122 @@
-.about {
-  background: #ffffff;
+.about{
+  background:#FFFFFF;
 }
 
 
-/* =========================
-   ABOUT SEASPIRE
-========================= */
+/*========================================
+  ABOUT SEASPIRE
+========================================*/
 
+.aboutContent{
 
-.aboutContent {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 120px 40px;
+  max-width:1100px;
+
+  margin:0 auto;
+
+  padding:120px 40px;
+
 }
 
 
+.aboutText{
 
-.sectionTag {
-  text-align: center;
-  color: #005b96;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
-}
+  max-width:760px;
 
+  margin:0 auto 24px;
 
+  color:#64748B;
 
-.aboutContent h2 {
-  text-align: center;
-  color: #003b5c;
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+  font-size:18px;
 
+  line-height:1.9;
 
-
-.aboutContent p {
-  color: #53646f;
-  font-size: 18px;
-  line-height: 1.9;
-  margin-bottom: 26px;
 }
 
 
 
+/*========================================
+  WHY US
+========================================*/
+
+.why{
+
+  background:#F8FBFD;
+
+  padding:120px 40px;
+
+}
 
 
-/* =========================
-   WHY US SECTION
-========================= */
+.intro{
 
+  max-width:820px;
 
-.why {
-  background: #f8fbfd;
-  padding: 120px 40px;
-  text-align: center;
+  margin:0 auto 48px;
+
+  color:#64748B;
+
+  font-size:18px;
+
+  line-height:1.9;
+
+  text-align:center;
+
 }
 
 
 
-.why h2 {
-  color: #005b96;
-  font-size: 44px;
-  font-weight: 700;
-  margin-bottom: 20px;
+/*========================================
+  WHY US IMAGE
+========================================*/
+
+.whyImage{
+
+  display:block;
+
+  width:100%;
+
+  max-width:1100px;
+
+  height:500px;
+
+  margin:16px auto 64px;
+
+  object-fit:cover;
+
 }
 
 
 
-.why h3 {
-  color: #0e7490;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 35px;
+/*========================================
+  KEY CARDS
+========================================*/
+
+.cards{
+
+  max-width:1100px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:32px;
+
 }
 
 
+.card{
 
+  background:#FFFFFF;
 
-/* WHY US DESCRIPTION */
+  padding:46px 34px;
 
+  min-height:300px;
 
-.intro {
-  max-width: 900px;
-  margin: 0 auto 50px;
-  color: #53646f;
-  font-size: 17px;
-  line-height: 1.9;
-}
+  border:1px solid #E5EEF4;
 
-
-
-
-/* WHY US IMAGE */
-
-
-.whyImage {
-  display: block;
-  width: 100%;
-  max-width: 1100px;
-  height: 420px;
-  margin: 20px auto 80px;
-  object-fit: cover;
-}
-
-
-
-
-
-/* =========================
-   3 KEYS WE PROMISED
-========================= */
-
-
-.promise {
-  color: #003b5c;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-}
-
-
-
-.keys {
-  color: #005b96;
-  font-size: 15px;
-  letter-spacing: 2px;
-  margin-bottom: 55px;
-}
-
-
-
-
-
-/* =========================
-   CARD NUMBER
-========================= */
-
-
-.cardNumber {
-  font-size: 54px;
-  font-weight: 700;
-  color: #9fd7ff;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-
-
-
-
-/* =========================
-   KEY CARDS
-========================= */
-
-
-.cards {
-  max-width: 1100px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 35px;
-}
-
-
-
-.card {
-
-  background: #ffffff;
-
-  padding: 45px 36px;
-
-  min-height: 300px;
-
-  border: 1px solid #e4edf3;
+  border-radius:6px;
 
   transition:
     transform .35s ease,
@@ -188,12 +126,13 @@
 }
 
 
+.card:hover{
 
-.card:hover {
+  background:#FFFFFF;
 
-  transform: translateY(-8px);
+  transform:translateY(-8px);
 
-  border-color: #005b96;
+  border-color:#005B96;
 
   box-shadow:
     0 20px 45px rgba(0,91,150,.12);
@@ -202,93 +141,143 @@
 
 
 
-.card h4 {
+/*========================================
+  CARD NUMBER
+========================================*/
 
-  color: #003b5c;
+.cardNumber{
 
-  font-size: 24px;
+  color:#A7D8FF;
 
-  font-weight: 700;
+  font-size:52px;
 
-  margin-bottom: 18px;
+  font-weight:700;
 
-}
+  line-height:1;
 
-
-
-.card p {
-
-  color: #53646f;
-
-  font-size: 15px;
-
-  line-height: 1.9;
-
-  text-align: left;
+  margin-bottom:20px;
 
 }
 
 
 
-.card:hover h4 {
+/*========================================
+  CARD CONTENT
+========================================*/
 
-  color: #005b96;
+.card h4{
+
+  color:#003B5C;
+
+  font-size:24px;
+
+  font-weight:700;
+
+  margin-bottom:16px;
+
+}
+
+
+.card p{
+
+  color:#53646F;
+
+  font-size:15px;
+
+  line-height:1.9;
+
+  text-align:left;
+
+}
+
+
+.card:hover h4{
+
+  color:#005B96;
 
 }
 
 
 
+/*========================================
+  RESPONSIVE
+========================================*/
+
+@media (max-width:992px){
+
+.aboutContent{
+
+padding:100px 32px;
+
+}
+
+.why{
+
+padding:100px 32px;
+
+}
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.whyImage{
+
+height:420px;
+
+}
+
+}
 
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
+@media (max-width:768px){
 
+.aboutContent{
 
-@media(max-width:768px){
+padding:80px 24px;
 
+}
 
-  .aboutContent {
+.why{
 
-    padding: 80px 24px;
+padding:80px 24px;
 
-  }
+}
 
+.intro{
 
-  .aboutContent h2,
-  .why h2 {
+font-size:16px;
 
-    font-size: 34px;
+}
 
-  }
+.whyImage{
 
+height:280px;
 
-  .why {
+margin-bottom:60px;
 
-    padding: 80px 24px;
+}
 
-  }
+.cards{
 
+grid-template-columns:1fr;
 
-  .why h3 {
+}
 
-    font-size: 22px;
+.card{
 
-  }
+min-height:auto;
 
+padding:38px 28px;
 
-  .whyImage {
+}
 
-    height: 280px;
+.cardNumber{
 
-  }
+font-size:44px;
 
-
-  .cards {
-
-    grid-template-columns: 1fr;
-
-  }
-
+}
 
 }

@@ -1,56 +1,83 @@
 import { Product } from "../types/Product";
 
-
 export const products: Product[] = [
   {
-    id: "premium-seafood",
+    id: "fresh-seafood",
 
-    name: "Premium Seafood Products",
+    name: "Fresh Seafood",
 
-    category: "Seafood Processing",
+    category: "Fresh Seafood",
 
-    description:
-      "High quality seafood products processed with strict quality control and international food safety standards.",
+    description: "",
 
-    image:
-      "/images/products/premium-seafood.webp",
+    image: "/images/home/fresh-seafood.webp",
 
-    features: [
-      "Quality controlled processing",
-      "Cold chain management",
-      "International export capability",
-    ],
+    features: [],
 
-    applications: [
-      "Food Service",
-      "Retail",
-      "Global Distribution",
-    ],
+    applications: [],
   },
 
   {
     id: "frozen-seafood",
 
-    name: "Frozen Seafood Solutions",
+    name: "Frozen Seafood",
 
     category: "Frozen Seafood",
 
-    description:
-      "Reliable frozen seafood solutions supporting global customers with consistent supply and quality.",
+    description: "",
 
-    image:
-      "/images/products/frozen-seafood.webp",
+    image: "/images/home/frozen-seafood.webp",
 
-    features: [
-      "Temperature controlled supply chain",
-      "Stable production capability",
-      "Global logistics support",
-    ],
+    features: [],
 
-    applications: [
-      "Wholesale",
-      "Importers",
-      "Food Manufacturers",
-    ],
+    applications: [],
+  },
+
+  {
+    id: "premium-seafood",
+
+    name: "Premium Seafood",
+
+    category: "Premium Seafood",
+
+    description: "",
+
+    image: "/images/home/premium-seafood.webp",
+
+    features: [],
+
+    applications: [],
+  },
+
+  {
+    id: "processed-seafood",
+
+    name: "Processed Seafood",
+
+    category: "Processed Seafood",
+
+    description: "",
+
+    image: "/images/home/processed-seafood.webp",
+
+    features: [],
+
+    applications: [],
+  },
+
+  {
+    id: "thai-seafood",
+
+    name: "Thai Seafood",
+
+    category: "Thai Seafood",
+
+    description: "",
+
+    image: "/images/home/thai-seafood.webp",
+
+    features: [],
+
+    applications: [],
   },
 ];

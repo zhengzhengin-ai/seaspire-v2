@@ -25,6 +25,10 @@ export default function SectionHeading({
         </p>
       )}
 
+      {tag && (
+        <div className={styles.line}></div>
+      )}
+
       <h2>
         {title}
       </h2>

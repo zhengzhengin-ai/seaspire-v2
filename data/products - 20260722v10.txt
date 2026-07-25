@@ -1,0 +1,140 @@
+import { Product } from "../types/Product";
+
+
+export const products: Product[] = [
+
+  {
+    id: "frozen-tuna",
+
+    name: "Frozen Tuna",
+
+    category: "Frozen Seafood",
+
+    description:
+      "Premium tuna products supplied through reliable sourcing, controlled processing and international cold chain management.",
+
+    image:
+      "/images/frozen-tuna.webp",
+
+    features: [
+      "Reliable sourcing",
+      "Quality controlled processing",
+      "International cold chain",
+    ],
+
+    applications: [
+      "Food Service",
+      "Wholesale",
+      "Global Distribution",
+    ],
+  },
+
+
+  {
+    id: "salmon",
+
+    name: "Salmon",
+
+    category: "Fresh & Frozen Seafood",
+
+    description:
+      "Premium salmon products prepared to meet customer specifications with consistent quality and reliable supply.",
+
+    image:
+      "/images/salmon.webp",
+
+    features: [
+      "Fresh and frozen options",
+      "Customized processing",
+      "Consistent quality",
+    ],
+
+    applications: [
+      "Restaurants",
+      "Hotels",
+      "Food Service",
+    ],
+  },
+
+
+  {
+    id: "bluefin-tuna",
+
+    name: "Bluefin Tuna",
+
+    category: "Premium Seafood",
+
+    description:
+      "Premium bluefin tuna products selected and processed to support high-end food service and international seafood markets.",
+
+    image:
+      "/images/bluefin-tuna.webp",
+
+    features: [
+      "Premium quality",
+      "Controlled processing",
+      "Export capability",
+    ],
+
+    applications: [
+      "Premium Restaurants",
+      "Japanese Cuisine",
+      "Global Distribution",
+    ],
+  },
+
+
+  {
+    id: "hamachi",
+
+    name: "HAMACHI",
+
+    category: "Premium Seafood",
+
+    description:
+      "Premium hamachi products supplied with flexible processing options for professional food service customers.",
+
+    image:
+      "/images/hamachi.webp",
+
+    features: [
+      "Premium quality",
+      "Flexible processing",
+      "Reliable supply",
+    ],
+
+    applications: [
+      "Restaurants",
+      "Hotels",
+      "Food Service",
+    ],
+  },
+
+
+  {
+    id: "softshell-cuttlefish",
+
+    name: "Softshell Cuttlefish",
+
+    category: "Processed Seafood",
+
+    description:
+      "Specialty softshell cuttlefish products prepared for food service and international seafood distribution requirements.",
+
+    image:
+      "/images/softshell-cuttlefish.webp",
+
+    features: [
+      "Specialty seafood product",
+      "Customized processing",
+      "Cold chain management",
+    ],
+
+    applications: [
+      "Food Service",
+      "Wholesale",
+      "Global Distribution",
+    ],
+  },
+
+];

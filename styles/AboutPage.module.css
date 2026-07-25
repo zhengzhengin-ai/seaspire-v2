@@ -55,28 +55,6 @@
 }
 
 
-.heading {
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto 70px;
-}
-
-
-.heading h2 {
-  font-size: 44px;
-  font-weight: 700;
-  color: #005b96;
-  margin: 0;
-}
-
-
-.subHeading {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #647783;
-}
-
-
 
 .philosophyGrid {
   max-width: 1200px;
@@ -90,6 +68,19 @@
 .philosophyCard {
   background: #ffffff;
   padding: 45px 35px;
+  border:1px solid #E5EEF4;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+.philosophyCard:hover{
+  transform:translateY(-6px);
+  border-color:#005B96;
+  box-shadow:0 16px 36px rgba(0,91,150,.12);
+
 }
 
 
@@ -140,7 +131,20 @@
   text-align: center;
   padding: 40px 20px;
   border: 1px solid #dce8ef;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
 }
+
+.strengthCard:hover{
+  transform:translateY(-6px);
+  border-color:#005B96;
+  box-shadow:0 16px 36px rgba(0,91,150,.12);
+
+}
+
 
 
 .strengthCard h3 {
@@ -156,28 +160,44 @@
 }
 
 
-
 .companyBullet {
   max-width: 900px;
   margin: 0 auto 50px;
 }
 
 
-.companyBullet ul {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  padding: 0;
-  list-style: none;
+.companyBullet p{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:16px;
+
+  margin:0;
+
+  font-size:22px;
+
+  font-weight:700;
+
+  color:#003B5C;
+
 }
 
 
-.companyBullet li {
-  font-size: 18px;
-  font-weight: 600;
-  color: #003b5c;
-}
+.dot{
 
+  color:#005B96;
+
+  font-size:24px;
+
+  opacity:.65;
+
+}
 
 
 .companyText {
@@ -234,6 +254,19 @@
 .facilityCard {
   background: #ffffff;
   padding: 40px 35px;
+  border:1px solid #E5EEF4;
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+
+}
+
+.facilityCard:hover{
+  transform:translateY(-6px);
+  border-color:#005B96;
+  box-shadow:0 16px 36px rgba(0,91,150,.12);
+
 }
 
 
@@ -311,10 +344,22 @@
   }
 
 
-  .companyBullet ul {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+  .companyBullet p{
+
+  justify-content:center;
+  
+  font-size:18px;
+  
+  text-align:center;
+
+  gap:12px;
+
+  }
+
+  .dot{
+
+  display:none;
+
   }
 
 

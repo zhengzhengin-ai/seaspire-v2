@@ -1,51 +1,16 @@
-/* ==========================
-   COMMON
-========================== */
+/*==============================
+  PRODUCTS
+==============================*/
 
-
-.heading {
-
-  text-align:center;
-
-  margin-bottom:70px;
-
-}
-
-
-.heading h2 {
-
-  color:#005B96;
-
-  font-size:48px;
-
-  line-height:1.05;
-
-  font-weight:700;
-
-  text-transform:uppercase;
-
-}
-
-
-
-
-
-/* ==========================
-   MAIN PRODUCTS
-========================== */
-
-
-.products {
-
-  background:#ffffff;
+.products{
 
   padding:120px 40px;
 
+  background:#FFFFFF;
+
 }
 
-
-
-.productGrid {
+.productGrid{
 
   max-width:1400px;
 
@@ -61,169 +26,19 @@
 
 
 
-.productCard {
-
-  transition:.35s;
-
-}
-
-
-
-.imageWrapper {
-
-  position:relative;
-
-  overflow:hidden;
-
-  border-radius:20px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
-
-}
-
-
-
-.imageWrapper :global(img) {
-
-  width:100%;
-
-  aspect-ratio:3/4;
-
-  object-fit:cover;
-
-  transition:.45s;
-
-  display:block;
-
-}
-
-
-
-.imageWrapper::after {
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:rgba(15,23,42,.58);
-
-  opacity:0;
-
-  transition:.35s;
-
-}
-
-
-
-.overlayContent {
-
-  position:absolute;
-
-  inset:0;
-
-  z-index:2;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  align-items:center;
-
-  opacity:0;
-
-  transition:.35s;
-
-  color:#ffffff;
-
-}
-
-
-
-.overlayContent span {
-
-  font-size:20px;
-
-  font-weight:700;
-
-  margin-bottom:18px;
-
-}
-
-
-
-.overlayContent p {
-
-  margin:6px 0;
-
-  font-size:18px;
-
-}
-
-
-
-.imageWrapper:hover :global(img) {
-
-  transform:scale(1.05);
-
-}
-
-
-
-.imageWrapper:hover::after {
-
-  opacity:1;
-
-}
-
-
-
-.imageWrapper:hover .overlayContent {
-
-  opacity:1;
-
-}
-
-
-
-.productCard h3 {
-
-  margin-top:24px;
-
-  text-align:center;
-
-  color:#005B96;
-
-  font-size:24px;
-
-  font-weight:700;
-
-}
-
-
-
-
-
-/* ==========================
-   PROCESSING OPTIONS
-========================== */
-
-
-.processing {
-
-  background:#F8FBFD;
+/*==============================
+  PROCESSING
+==============================*/
+
+.processing{
 
   padding:120px 40px;
 
+  background:#F8FBFD;
+
 }
 
-
-
-.processingGrid {
+.processingGrid{
 
   max-width:1200px;
 
@@ -237,18 +52,15 @@
 
 }
 
+.processingCard{
 
+  background:#FFFFFF;
 
-.processingCard {
+  border:1px solid #E5EEF4;
 
-  background:#ffffff;
+  border-radius:8px;
 
   padding:42px;
-
-  border:1px solid #EDF2F7;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,.05);
 
   text-align:center;
 
@@ -256,74 +68,67 @@
 
 }
 
-
-
-.processingCard:hover {
+.processingCard:hover{
 
   transform:translateY(-8px);
 
+  box-shadow:0 16px 40px rgba(0,91,150,.10);
+
 }
 
-
-
-.processingCard h3 {
+.processingCard h3{
 
   color:#005B96;
 
   font-size:28px;
 
+  font-weight:700;
+
   margin-bottom:18px;
 
 }
 
+.processingCard p{
 
-
-.processingCard p {
-
-  color:#475569;
+  color:#64748B;
 
   font-size:17px;
 
+  line-height:1.8;
+
 }
 
+.processingText{
 
-
-.processingText {
-
-  max-width:900px;
+  max-width:860px;
 
   margin:0 auto;
 
-  text-align:center;
-
-  color:#475569;
+  color:#64748B;
 
   font-size:18px;
 
-  line-height:2;
+  line-height:1.9;
+
+  text-align:center;
 
 }
 
 
 
+/*==============================
+  QUALITY
+==============================*/
 
-
-/* ==========================
-   QUALITY ASSURANCE
-========================== */
-
-
-.quality {
-
-  background:#ffffff;
+.quality{
 
   padding:120px 40px;
 
+  background:#FFFFFF;
+
 }
 
-
-
-.qualityGrid {
+.qualityGrid{
 
   max-width:1200px;
 
@@ -337,119 +142,106 @@
 
 }
 
-
-
-.qualityCard {
+.qualityCard{
 
   background:#F8FBFD;
 
-  padding:42px;
+  border:1px solid #E5EEF4;
 
-  border:1px solid #EDF2F7;
+  border-radius:8px;
+
+  padding:42px;
 
   text-align:center;
 
 }
 
-
-
-.qualityCard h3 {
+.qualityCard h3{
 
   color:#005B96;
 
-  font-size:30px;
+  font-size:28px;
 
   font-weight:700;
 
 }
 
+.qualityCard p{
 
+  margin-top:16px;
 
-.qualityText {
+  color:#64748B;
 
-  max-width:900px;
+  font-size:16px;
+
+  line-height:1.8;
+
+}
+
+.qualityText{
+
+  max-width:860px;
 
   margin:0 auto;
 
-  text-align:center;
-
-  color:#475569;
+  color:#64748B;
 
   font-size:18px;
 
-  line-height:2;
+  line-height:1.9;
+
+  text-align:center;
 
 }
 
 
 
+/*==============================
+  RESPONSIVE
+==============================*/
 
+@media(max-width:1200px){
 
-/* ==========================
-   MOBILE
-========================== */
+.productGrid{
 
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
 
 @media(max-width:992px){
 
-
-.productGrid {
-
-  grid-template-columns:repeat(2,1fr);
-
-}
-
-
 .processingGrid,
 
-.qualityGrid {
+.qualityGrid{
 
-  grid-template-columns:1fr;
-
-}
-
+grid-template-columns:repeat(2,1fr);
 
 }
 
-
+}
 
 @media(max-width:768px){
-
 
 .products,
 
 .processing,
 
-.quality {
+.quality{
 
-  padding:70px 24px;
-
-}
-
-
-
-.heading h2 {
-
-  font-size:36px;
+padding:80px 24px;
 
 }
 
-
-
-.productGrid {
-
-  grid-template-columns:1fr;
-
-}
-
+.productGrid,
 
 .processingGrid,
 
-.qualityGrid {
+.qualityGrid{
 
-  grid-template-columns:1fr;
+grid-template-columns:1fr;
 
 }
-
 
 }

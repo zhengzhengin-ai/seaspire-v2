@@ -1,31 +1,45 @@
 .cta {
+
   background: #003b5c;
-  padding: 120px 20px;
+
+  padding: 40px 20px;
+
   color: #ffffff;
+
 }
 
 
 .container {
+
   max-width: 1100px;
+
   margin: 0 auto;
+
   text-align: center;
+
 }
 
 
 
 .tag {
-  font-size: 15px;
+
+  font-size: 14px;
+
   font-weight: 700;
+
   letter-spacing: 4px;
+
   color: #9fd7ff;
-  margin-bottom: 30px;
+
+  margin-bottom: 16px;
+
 }
 
 
 
 .container h2 {
 
-  font-size: 58px;
+  font-size: 48px;
 
   line-height: 1.15;
 
@@ -33,7 +47,7 @@
 
   letter-spacing: 1px;
 
-  margin: 0 0 35px;
+  margin: 0 0 20px;
 
 }
 
@@ -43,11 +57,11 @@
 
   max-width: 780px;
 
-  margin: 0 auto 45px;
+  margin: 0 auto 24px;
 
-  font-size: 19px;
+  font-size: 17px;
 
-  line-height: 1.9;
+  line-height: 1.75;
 
   color: rgba(255,255,255,.88);
 
@@ -63,7 +77,7 @@
 
   justify-content: center;
 
-  padding: 17px 44px;
+  padding: 14px 38px;
 
   background: #ffffff;
 
@@ -102,14 +116,14 @@
 
   .container h2 {
 
-    font-size: 46px;
+    font-size: 42px;
 
   }
 
 
   .description {
 
-    font-size:18px;
+    font-size: 17px;
 
   }
 
@@ -124,37 +138,39 @@
 
   .cta {
 
-    padding:80px 20px;
+    padding: 56px 20px;
 
   }
 
 
   .container h2 {
 
-    font-size:34px;
+    font-size: 34px;
 
   }
 
 
   .tag {
 
-    font-size:13px;
+    font-size: 13px;
 
   }
 
 
   .description {
 
-    font-size:16px;
+    font-size: 16px;
+
+    line-height: 1.7;
 
   }
 
 
   .button {
 
-    width:100%;
+    width: 100%;
 
-    max-width:280px;
+    max-width: 280px;
 
   }
 

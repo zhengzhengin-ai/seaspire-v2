@@ -1,4 +1,7 @@
 import Image from "next/image";
+
+import SectionHeading from "./SectionHeading";
+
 import styles from "../styles/About.module.css";
 
 const reasons = [
@@ -19,64 +22,43 @@ const reasons = [
   },
 ];
 
-
 export default function About() {
   return (
     <section className={styles.about}>
 
-
-      {/* ABOUT SEASPIRE */}
-
+      {/* ABOUT */}
 
       <div className={styles.aboutContent}>
 
+        <SectionHeading
+          tag="ABOUT SEASPIRE"
+          title="Trusted Seafood Partner"
+        />
 
-        <p className={styles.sectionTag}>
-          ABOUT SEASPIRE
-        </p>
-
-
-        <h2>
-          Trusted Seafood Partner
-        </h2>
-
-
-        <p>
+        <p className={styles.aboutText}>
           Seaspire Phuket is a premium seafood supplier specializing in
           fresh and frozen seafood products for customers worldwide.
         </p>
 
-
-        <p>
+        <p className={styles.aboutText}>
           Through our affiliated long-line fishing fleet and experienced
           processing facilities, we deliver reliable quality, food safety
           and stable supply to importers, distributors and food service
           partners.
         </p>
 
-
       </div>
-
 
 
 
       {/* WHY US */}
 
-
-
       <div className={styles.why}>
 
-
-        <h2>
-          WHY US
-        </h2>
-
-
-        <h3>
-          — Consistency is the Key —
-        </h3>
-
-
+        <SectionHeading
+          tag="WHY US"
+          title="Consistency is the Key"
+        />
 
         <p className={styles.intro}>
           Seaspire provides fresh and premium seafood products to global
@@ -85,73 +67,44 @@ export default function About() {
           partners worldwide.
         </p>
 
-
-
         <Image
-          src="/images/why-us.webp"
+          src="/images/about/why-us.webp"
           alt="Seaspire Seafood"
           width={1200}
           height={700}
+          sizes="(max-width:768px) 100vw, 1100px"
           className={styles.whyImage}
         />
 
-
-
-        <p className={styles.promise}>
-          3 KEYS WE PROMISED
-        </p>
-
-
-
-        <p className={styles.keys}>
-          — Legality / Food Safety / Consistency —
-        </p>
-
-
-
+        <SectionHeading
+          tag="3 KEYS WE PROMISED"
+          title="Legality • Food Safety • Consistency"
+        />
 
         <div className={styles.cards}>
 
-
           {reasons.map((reason, index) => (
-
 
             <div
               key={reason.title}
               className={styles.card}
             >
 
-
               <div className={styles.cardNumber}>
                 {String(index + 1).padStart(2, "0")}
               </div>
 
+              <h4>{reason.title}</h4>
 
-
-              <h4>
-                {reason.title}
-              </h4>
-
-
-
-              <p>
-                {reason.description}
-              </p>
-
-
+              <p>{reason.description}</p>
 
             </div>
 
-
           ))}
-
-
 
         </div>
 
-
       </div>
-
 
     </section>
   );

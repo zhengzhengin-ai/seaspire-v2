@@ -12,7 +12,7 @@ export default function PageHero({
   subtitle,
   title,
   description,
-  image = "/images/about-hero.webp",
+  image = "/images/hero/about-hero.webp",
 }: PageHeroProps) {
 
   return (

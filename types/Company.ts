@@ -1,3 +1,13 @@
+export interface CompanyLocation {
+  id: string;
+
+  name: string;
+
+  phone: string;
+
+  address: string;
+}
+
 export interface Company {
   name: string;
 
@@ -5,15 +15,9 @@ export interface Company {
 
   description: string;
 
-  contact: {
-    email: string;
+  email: string;
 
-    phone: string;
-  };
-
-  address: {
-    full: string;
-  };
+  locations: CompanyLocation[];
 
   map: {
     embedUrl: string;

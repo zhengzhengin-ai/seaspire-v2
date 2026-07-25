@@ -1,31 +1,76 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import ContentCard from "@/components/ContentCard";
 import PageHero from "../../components/PageHero";
 import CTA from "../../components/CTA";
 import styles from "../../styles/ProductsPage.module.css";
+import SectionHeading from "@/components/SectionHeading";
 
 const products = [
   {
     name: "Frozen Tuna",
-    image: "/images/frozen-tuna.webp",
+    description:
+      "Premium tuna products supplied through reliable sourcing, controlled processing and international cold chain management.",
+    image: "/images/products/frozen-tuna.webp",
   },
   {
     name: "Salmon",
-    image: "/images/salmon.webp",
+    description:
+      "Premium salmon products prepared to meet customer specifications with consistent quality and reliable supply.",
+    image: "/images/products/salmon.webp",
   },
   {
     name: "Bluefin Tuna",
-    image: "/images/bluefin-tuna.webp",
+    description:
+      "Premium bluefin tuna products selected and processed to support high-end food service and international seafood markets.",
+    image: "/images/products/bluefin-tuna.webp",
   },
   {
     name: "HAMACHI",
-    image: "/images/hamachi.webp",
+    description:
+      "Premium hamachi products supplied with flexible processing options for professional food service customers.",
+    image: "/images/products/hamachi.webp",
   },
   {
     name: "Softshell Cuttlefish",
-    image: "/images/softshell-cuttlefish.webp",
+    description:
+      "Specialty softshell cuttlefish products prepared for food service and international seafood distribution requirements.",
+    image: "/images/products/softshell-cuttlefish.webp",
   },
 ];
 
+
+export const metadata: Metadata = {
+
+  title: "Products",
+
+  description:
+    "Explore Seaspire Phuket's premium seafood products including frozen tuna, bluefin tuna, salmon, hamachi, cuttlefish and customized seafood processing solutions.",
+
+  keywords: [
+
+    "Frozen Tuna",
+
+    "Bluefin Tuna",
+
+    "Salmon Supplier",
+
+    "Hamachi",
+
+    "Cuttlefish",
+
+    "Frozen Seafood",
+
+    "Seafood Processing",
+
+    "OEM Seafood processing",
+
+    "Seafood Supplier Thailand",
+
+    "Seafood Export Thailand",
+
+  ],
+
+};
 
 export default function ProductsPage() {
   return (
@@ -36,7 +81,7 @@ export default function ProductsPage() {
         subtitle="OUR PRODUCTS"
         title={"PREMIUM SEAFOOD\nFROM PHUKET"}
         description="Fresh • Frozen • Processed"
-        image="/images/products-hero.webp"
+        image="/images/hero/products-hero.webp"
       />
 
 
@@ -44,87 +89,25 @@ export default function ProductsPage() {
       <section className={styles.products}>
 
 
-        <div className={styles.heading}>
-
-
-          <p className={styles.sectionTag}>
-            MAIN PRODUCTS
-          </p>
-
-
-          <h2>
-            Representative Seafood Products
-          </h2>
-
-
-        </div>
+        <SectionHeading
+          tag="MAIN PRODUCTS"
+          title="Representative Seafood Products"
+        />
 
 
 
         <div className={styles.productGrid}>
 
-
           {products.map((product) => (
 
-
-            <div
-              className={styles.productCard}
-              key={product.name}
-            >
-
-
-              <div className={styles.imageWrapper}>
-
-
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={600}
-                  height={420}
-                />
-
-
-
-                <div className={styles.overlayContent}>
-
-
-                  <span>
-                    Available Forms
-                  </span>
-
-
-                  <p>
-                    Whole Fish
-                  </p>
-
-
-                  <p>
-                    Fillet
-                  </p>
-
-
-                  <p>
-                    HGT
-                  </p>
-
-
-                </div>
-
-
-              </div>
-
-
-
-              <h3>
-                {product.name}
-              </h3>
-
-
-            </div>
-
+           <ContentCard
+             key={product.name}
+             title={product.name}
+             description={product.description}
+             image={product.image}
+           />
 
           ))}
-
 
         </div>
 
@@ -138,20 +121,10 @@ export default function ProductsPage() {
       <section className={styles.processing}>
 
 
-        <div className={styles.heading}>
-
-
-          <p className={styles.sectionTag}>
-            PROCESSING OPTIONS
-          </p>
-
-
-          <h2>
-            Flexible Processing Solutions
-          </h2>
-
-
-        </div>
+        <SectionHeading
+          tag="PROCESSING OPTIONS"
+          title="Flexible Processing Solutions"
+        />
 
 
 
@@ -163,7 +136,7 @@ export default function ProductsPage() {
               Fresh
             </h3>
             <p>
-              Fresh Seafood
+              GG / Loin / Fillet 
             </p>
           </div>
 
@@ -174,7 +147,7 @@ export default function ProductsPage() {
               Frozen
             </h3>
             <p>
-              Frozen Seafood
+              IQF / VIP / Bulk Pack
             </p>
           </div>
 
@@ -185,7 +158,7 @@ export default function ProductsPage() {
               Customized
             </h3>
             <p>
-              Cutting & Packing
+              Cutting / Packing / Labelling
             </p>
           </div>
 
@@ -209,20 +182,10 @@ export default function ProductsPage() {
       <section className={styles.quality}>
 
 
-        <div className={styles.heading}>
-
-
-          <p className={styles.sectionTag}>
-            QUALITY ASSURANCE
-          </p>
-
-
-          <h2>
-            Commitment to Quality
-          </h2>
-
-
-        </div>
+        <SectionHeading
+          tag="QUALITY ASSURANCE"
+          title="Commitment to Quality"
+        />
 
 
 
@@ -233,6 +196,9 @@ export default function ProductsPage() {
             <h3>
               HACCP
             </h3>
+              <p>
+                International Food Safety
+              </p>
           </div>
 
 
@@ -240,6 +206,9 @@ export default function ProductsPage() {
             <h3>
               GMP
             </h3>
+              <p>
+                Good Manufacturing Practice
+              </p>
           </div>
 
 
@@ -247,6 +216,9 @@ export default function ProductsPage() {
             <h3>
               Traceability
             </h3>
+              <p>
+                From Vessel to Customer
+              </p>
           </div>
 
 

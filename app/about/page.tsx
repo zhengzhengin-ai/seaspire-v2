@@ -1,8 +1,43 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import PageHero from "../../components/PageHero";
 import CTA from "../../components/CTA";
+import SectionHeading from "../../components/SectionHeading";
 import styles from "../../styles/AboutPage.module.css";
+
+
+export const metadata: Metadata = {
+
+  title: "About",
+
+  description:
+    "Learn about Seaspire Phuket, a premium seafood supplier in Phuket, Thailand specializing in fishing, seafood processing, cold storage and global export solutions.",
+
+  keywords: [
+
+    "About Seaspire",
+
+    "Seafood Supplier Thailand",
+
+    "Seafood Supplier Phuket",
+
+    "Seafood Processing",
+
+    "Fishing Fleet",
+
+    "Cold Storage",
+
+    "Frozen Seafood",
+
+    "Seafood Export",
+
+    "OEM Seafood",
+
+  ],
+
+};
+
 
 export default function AboutPage() {
   return (
@@ -14,7 +49,7 @@ export default function AboutPage() {
         subtitle="ABOUT US"
         title={"ABOUT\nSEASPIRE PHUKET"}
         description="Premium Seafood Supplier from Phuket, Thailand"
-        image="/images/about-hero.webp"
+        image="/images/hero/about-hero.webp"
       />
 
 
@@ -68,13 +103,10 @@ export default function AboutPage() {
 
       <section className={styles.philosophy}>
 
-        <div className={styles.heading}>
-
-          <h2>
-            OUR PHILOSOPHY
-          </h2>
-
-        </div>
+        <SectionHeading
+          tag="OUR PHILOSOPHY"
+          title="Integrity • Food Safety • Consistency"
+        />
 
 
         <div className={styles.philosophyGrid}>
@@ -135,7 +167,7 @@ export default function AboutPage() {
             <p>
               Seaspire supplies fresh and premium seafood products to
               restaurants, supermarkets and distributors across USA,
-              Europe, Japan, Thailand and Singapore with stable supply.
+              Japan, Taiwan, Thailand and Philippines with stable supply.
             </p>
 
           </div>
@@ -151,17 +183,10 @@ export default function AboutPage() {
 
       <section className={styles.strengths}>
 
-        <div className={styles.heading}>
-
-          <h2>
-            OUR STRENGTHS
-          </h2>
-
-          <p className={styles.subHeading}>
-            — Why Global Customers Choose Seaspire Phuket —
-          </p>
-
-        </div>
+        <SectionHeading
+          tag="OUR STRENGTHS"
+          title="Why Global Customers Choose Seaspire Phuket"
+        />
 
 
         <div className={styles.strengthGrid}>
@@ -213,21 +238,17 @@ export default function AboutPage() {
 
         <div className={styles.companyBullet}>
 
-          <ul>
+          <p>
+            <span>Integrated Fishing Fleet.</span>
 
-            <li>
-              We operate vessel fleets.
-            </li>
+            <span className={styles.dot}>•</span>
 
-            <li>
-              We process our own catch.
-            </li>
+            <span>In-house Processing.</span>
 
-            <li>
-              We know fishes.
-            </li>
+            <span className={styles.dot}>•</span>
 
-          </ul>
+            <span>Reliable Supply.</span>
+          </p>
 
         </div>
 
@@ -268,20 +289,10 @@ export default function AboutPage() {
       <section className={styles.production}>
 
 
-        <div className={styles.heading}>
-
-
-          <h2>
-            OUR PRODUCTION & STORAGE
-          </h2>
-
-
-          <p className={styles.subHeading}>
-            — Reliable Processing & Cold Chain Management —
-          </p>
-
-
-        </div>
+        <SectionHeading
+          tag="OUR PRODUCTION & STORAGE"
+          title="Reliable Processing & Cold Chain Management"
+        />
 
 
 
@@ -293,6 +304,7 @@ export default function AboutPage() {
             alt="Production Facility"
             width={800}
             height={600}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
 
 
@@ -301,6 +313,7 @@ export default function AboutPage() {
             alt="Cold Storage Facility"
             width={800}
             height={600}
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
 
 
