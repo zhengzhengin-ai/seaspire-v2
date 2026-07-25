@@ -1,0 +1,600 @@
+SEASPIRE PHUKET
+PROJECT SPECIFICATION v2.1
+
+Production Deployment Edition
+Date: 2026-07-25
+
+
+==================================================
+1. PROJECT OVERVIEW
+==================================================
+
+Project Name:
+SEASPIRE PHUKET
+
+Website:
+https://www.seaspirephuket.com
+
+Business Type:
+Premium Seafood Supplier and Seafood Processing Partner
+
+Target Markets:
+Global Importers
+Distributors
+Wholesalers
+Restaurants
+Food Service Operators
+OEM Seafood Partners
+
+
+==================================================
+2. PRODUCTION STATUS
+==================================================
+
+Status:
+PRODUCTION / LIVE
+
+Production Date:
+2026-07-25
+
+The SEASPIRE PHUKET website has been successfully deployed
+to the production hosting environment.
+
+All primary website pages have been tested and confirmed
+to display correctly in production.
+
+The Contact Inquiry Form has been tested and confirmed
+to successfully submit inquiries and deliver email messages.
+
+
+==================================================
+3. TECHNOLOGY STACK
+==================================================
+
+Frontend Framework:
+Next.js 16.2.10
+
+Language:
+TypeScript
+
+UI:
+React
+
+Styling:
+CSS Modules
+Global CSS
+
+Image Optimization:
+Next.js Image
+
+Production Architecture:
+Static Export
+
+
+==================================================
+4. PRODUCTION ARCHITECTURE
+==================================================
+
+Development Environment:
+
+Next.js
+        ↓
+React
+        ↓
+TypeScript
+        ↓
+CSS Modules
+
+
+Production Environment:
+
+Next.js Static Export
+        ↓
+Static HTML
+        ↓
+CSS
+        ↓
+JavaScript
+        ↓
+Apache / PHP Hosting
+
+
+Contact Form:
+
+React Contact Form
+        ↓
+fetch()
+        ↓
+/contact.php
+        ↓
+PHP
+        ↓
+PHP mail()
+        ↓
+Sendmail
+        ↓
+info@seaspirephuket.com
+
+
+==================================================
+5. HOSTING ENVIRONMENT
+==================================================
+
+Hosting Provider:
+Network Solutions / PowWeb
+
+Platform:
+Debian
+
+PHP Version:
+8.4.7
+
+Sendmail:
+Available
+
+Sendmail Path:
+/usr/sbin/sendmail
+
+PHP Path:
+/usr/local/bin/php
+
+Production Document Root:
+
+/home/users/web/b1167/pow.seaspire/htdocs
+
+
+Deployment Method:
+SFTP
+
+SFTP Port:
+2222
+
+
+==================================================
+6. WEBSITE STRUCTURE
+==================================================
+
+Home:
+/
+
+About:
+ /about/
+
+Products:
+ /products/
+
+Solutions:
+ /solutions/
+
+Contact:
+ /contact/
+
+
+404 Page:
+Custom Next.js Not Found Page
+
+
+==================================================
+7. MAIN WEBSITE SECTIONS
+==================================================
+
+HOME
+
+Main Purpose:
+Brand introduction and primary seafood product presentation.
+
+Main Sections:
+Hero
+About Seaspire
+Product Categories
+Why Seaspire
+Call To Action
+
+
+ABOUT
+
+Main Purpose:
+Present company positioning, trust, quality and operating capabilities.
+
+Main Sections:
+About Seaspire
+Why Us
+Legality
+Food Safety
+Consistency
+
+
+PRODUCTS
+
+Main Purpose:
+Present premium seafood product categories and products.
+
+Product Categories:
+Fresh Seafood
+Frozen Seafood
+Premium Seafood
+Processed Seafood
+Thai Seafood
+
+
+SOLUTIONS
+
+Main Purpose:
+Present business solutions for international seafood partners.
+
+Target Customers:
+Importers
+Food Services
+Restaurants
+OEM Service
+Cold Storage
+
+
+Capabilities:
+Seafood Sourcing
+Processing Customization
+Quality Control
+Supply Chain Management
+
+
+CONTACT
+
+Main Purpose:
+Receive seafood sourcing and business partnership inquiries.
+
+Contact Form Fields:
+Company Name
+Contact Person
+Email Address
+Country
+Phone / WhatsApp
+Interested Products
+Requirements
+
+
+==================================================
+8. CONTACT FORM SYSTEM
+==================================================
+
+Frontend:
+React Client Component
+
+Component:
+components/ContactForm.tsx
+
+Production Endpoint:
+
+/contact.php
+
+
+Backend:
+PHP
+
+File:
+public/contact.php
+
+
+Production File:
+out/contact.php
+
+
+Request Method:
+POST
+
+
+Email Delivery:
+PHP mail()
+
+
+Mail Transport:
+Sendmail
+
+
+Recipient:
+info@seaspirephuket.com
+
+
+Contact Form Status:
+TESTED AND WORKING
+
+
+==================================================
+9. SEO IMPLEMENTATION
+==================================================
+
+Metadata:
+Implemented
+
+Page Metadata:
+Home
+About
+Products
+Solutions
+Contact
+
+
+Sitemap:
+ /sitemap.xml
+
+
+Robots:
+ /robots.txt
+
+
+Open Graph Image:
+ /og-image.jpg
+
+
+Web Manifest:
+ /site.webmanifest
+
+
+Search Engine:
+Google Search Console submission planned
+
+
+==================================================
+10. RESPONSIVE DESIGN
+==================================================
+
+Supported Devices:
+
+Desktop
+Tablet
+Mobile
+
+
+Responsive Testing:
+Completed
+
+
+Main Responsive Areas:
+Navigation
+Hero Sections
+Product Cards
+Solution Cards
+Capability Cards
+Contact Form
+Footer
+
+
+==================================================
+11. BRAND DESIGN SYSTEM
+==================================================
+
+Primary Brand Color:
+#003B5C
+
+Secondary Brand Color:
+#005B96
+
+Light Blue:
+#9FD7FF
+
+Light Background:
+#F8FBFD
+
+Primary Text:
+#003B5C
+
+Secondary Text:
+#64748B
+
+Design Direction:
+Premium
+Professional
+Clean
+Trustworthy
+International
+Seafood Industry Focused
+
+
+==================================================
+12. PROJECT STRUCTURE
+==================================================
+
+app/
+    layout.tsx
+    page.tsx
+    not-found.tsx
+    about/
+    products/
+    solutions/
+    contact/
+
+components/
+    Navbar.tsx
+    Footer.tsx
+    Hero.tsx
+    About.tsx
+    PageHero.tsx
+    CTA.tsx
+    ContactForm.tsx
+    ProductCard.tsx
+    ContentCard.tsx
+    CapabilityIcon.tsx
+    SectionHeading.tsx
+
+data/
+    company data
+    product data
+
+styles/
+    CSS Modules
+
+public/
+    images/
+    contact.php
+    robots.txt
+    sitemap.xml
+    site.webmanifest
+    og-image.jpg
+
+docs/
+    Project Specification Documents
+
+
+==================================================
+13. BUILD AND DEPLOYMENT
+==================================================
+
+Development Build Command:
+
+npm run build
+
+
+Production Output:
+
+out/
+
+
+The out/ directory contains the complete production
+website ready for deployment.
+
+
+Production Deployment:
+
+Upload all contents inside:
+
+out/
+
+to:
+
+/home/users/web/b1167/pow.seaspire/htdocs
+
+
+Important Production Files:
+
+index.html
+404.html
+_next/
+about/
+products/
+solutions/
+contact/
+images/
+contact.php
+robots.txt
+sitemap.xml
+site.webmanifest
+og-image.jpg
+
+
+==================================================
+14. VERSION CONTROL
+==================================================
+
+Repository:
+GitHub
+
+Repository:
+seaspire-v2
+
+
+Main Branch:
+main
+
+
+Version Control Purpose:
+
+Source Code Backup
+Project History
+Version Tracking
+Production Recovery
+Future Development
+
+
+Current Production Version:
+
+v1.1
+
+
+Version Description:
+
+Production Deployment Edition
+
+
+==================================================
+15. BACKUP STRATEGY
+==================================================
+
+The GitHub repository serves as the primary source code
+backup for the SEASPIRE PHUKET website.
+
+The production website is generated from the Next.js project
+and exported through the out/ directory.
+
+Recommended Backup Structure:
+
+Source Code:
+GitHub Repository
+
+Production Website:
+SFTP Hosting
+
+Project Documentation:
+docs/
+
+
+==================================================
+16. PRODUCTION VERIFICATION
+==================================================
+
+The following items have been verified:
+
+[OK] Home Page
+[OK] About Page
+[OK] Products Page
+[OK] Solutions Page
+[OK] Contact Page
+[OK] Responsive Layout
+[OK] Navigation
+[OK] Google Map
+[OK] Contact Form
+[OK] PHP Processing
+[OK] Email Delivery
+[OK] 404 Page
+[OK] Sitemap
+[OK] Robots.txt
+
+
+==================================================
+17. FUTURE DEVELOPMENT
+==================================================
+
+Potential Future Improvements:
+
+Product Detail Pages
+Multi-language Support
+Advanced Product Filtering
+CMS Integration
+Online Inquiry Management
+CRM Integration
+Google Analytics
+Google Search Console Optimization
+Structured Data Expansion
+Performance Monitoring
+
+
+==================================================
+18. FINAL PROJECT STATUS
+==================================================
+
+SEASPIRE PHUKET website version 1.1 has successfully
+completed production deployment.
+
+The website is currently live and accessible to global
+customers and business partners.
+
+Production Status:
+
+LIVE
+
+Project Status:
+
+PRODUCTION READY
+
+
+==================================================
+END OF DOCUMENT
+==================================================

@@ -14,27 +14,21 @@ import {
   localBusinessSchema,
 } from "@/lib/structuredData";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
 
   title: {
-
     default: siteConfig.name,
-
     template: "%s | SEASPIRE PHUKET",
-
   },
 
   description: siteConfig.description,
@@ -57,6 +51,15 @@ export const metadata: Metadata = {
 
     type: "website",
 
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+
   },
 
   twitter: {
@@ -66,6 +69,8 @@ export const metadata: Metadata = {
     title: siteConfig.name,
 
     description: siteConfig.description,
+
+    images: ["/og-image.jpg"],
 
   },
 
@@ -79,7 +84,6 @@ export const metadata: Metadata = {
 
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,16 +94,13 @@ export default function RootLayout({
 
   const localBusinessData = localBusinessSchema();
 
-
   return (
     <html
       lang="en"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-
       <body className="min-h-full flex flex-col">
-
 
         <script
           type="application/ld+json"
@@ -108,7 +109,6 @@ export default function RootLayout({
           }}
         />
 
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -116,20 +116,15 @@ export default function RootLayout({
           }}
         />
 
-
         <Navbar />
-
 
         <main style={{ flex: 1 }}>
           {children}
         </main>
 
-
         <Footer />
 
-
       </body>
-
     </html>
   );
 }

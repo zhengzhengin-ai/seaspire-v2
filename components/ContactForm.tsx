@@ -1,41 +1,72 @@
 "use client";
 
-
-import { useActionState } from "react";
-
-import { sendInquiry } from "@/app/actions/contact";
+import { useState } from "react";
 
 import styles from "@/styles/ContactPage.module.css";
 
-
-
-const initialState = {
-  success: false,
-  message: "",
-};
-
-
-
 export default function ContactForm() {
+  const [pending, setPending] = useState(false);
 
+  const [result, setResult] = useState({
+    success: false,
+    message: "",
+  });
 
-  const [state, formAction, pending] =
-    useActionState(
-      sendInquiry,
-      initialState
-    );
+async function handleSubmit(
+  event: React.FormEvent<HTMLFormElement>
+) {
+  event.preventDefault();
 
+  setPending(true);
 
+  setResult({
+    success: false,
+    message: "",
+  });
+
+  const form = event.currentTarget;
+
+  const formData = new FormData(form);
+
+  try {
+
+    const response = await fetch("/contact.php", {
+      method: "POST",
+      body: formData,
+    });
+
+    console.log("Status:", response.status);
+    console.log("URL:", response.url);
+
+    const text = await response.text();
+
+    console.log(text);
+
+    const data = JSON.parse(text);
+
+    setResult(data);
+
+    if (data.success) {
+      form.reset();
+    }
+
+  } catch (error) {
+
+    console.error(error);
+
+    setResult({
+      success: false,
+      message: "Unable to send inquiry.",
+    });
+
+  }
+
+  setPending(false);
+}
 
   return (
-
     <>
-
-
-      <form
-        action={formAction}
-      >
-
+      <form onSubmit={handleSubmit}>
 
         <input
           type="text"
@@ -44,16 +75,12 @@ export default function ContactForm() {
           required
         />
 
-
-
         <input
           type="text"
           name="contact"
           placeholder="Contact Person"
           required
         />
-
-
 
         <input
           type="email"
@@ -62,15 +89,11 @@ export default function ContactForm() {
           required
         />
 
-
-
         <input
           type="text"
           name="country"
           placeholder="Country"
         />
-
-
 
         <input
           type="text"
@@ -78,71 +101,41 @@ export default function ContactForm() {
           placeholder="Phone / WhatsApp"
         />
 
-
-
         <input
           type="text"
           name="products"
           placeholder="Interested Products"
         />
 
-
-
         <textarea
-
           name="message"
-
           placeholder="Your requirements"
-
           rows={6}
-
           required
-
         />
-
-
 
         <button
           type="submit"
           disabled={pending}
         >
-
           {pending
             ? "Sending..."
-            : "Submit Inquiry"
-          }
-
+            : "Submit Inquiry"}
         </button>
-
-
 
       </form>
 
-
-
-
-      {
-        state.message && (
-
-          <p
-            className={
-              state.success
+      {result.message && (
+        <p
+          className={
+            result.success
               ? styles.successMessage
               : styles.errorMessage
-            }
-          >
-
-            {state.message}
-
-          </p>
-
-        )
-      }
-
-
-
+          }
+        >
+          {result.message}
+        </p>
+      )}
     </>
-
   );
-
 }
