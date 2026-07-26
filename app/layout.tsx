@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 
-import Script from "next/script";
-
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 import { siteConfig } from "@/constants";
 
@@ -48,6 +47,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
 
 
+
   openGraph: {
 
     title: siteConfig.name,
@@ -62,16 +62,21 @@ export const metadata: Metadata = {
 
     type: "website",
 
+
     images: [
       {
         url: "/og-image.jpg",
+
         width: 1200,
+
         height: 630,
+
         alt: siteConfig.name,
       },
     ],
 
   },
+
 
 
   twitter: {
@@ -87,6 +92,7 @@ export const metadata: Metadata = {
   },
 
 
+
   robots: {
 
     index: true,
@@ -100,14 +106,20 @@ export const metadata: Metadata = {
 
 
 
+
 export default function RootLayout({
+
   children,
+
 }: Readonly<{
+
   children: React.ReactNode;
+
 }>) {
 
 
   const structuredData = organizationSchema();
+
 
   const localBusinessData = localBusinessSchema();
 
@@ -116,68 +128,47 @@ export default function RootLayout({
   return (
 
     <html
+
       lang="en"
+
       data-scroll-behavior="smooth"
+
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+
     >
 
 
       <body className="min-h-full flex flex-col">
 
 
-        {/* Google Analytics 4 */}
-
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-F0TDS5VW1B"
-          strategy="afterInteractive"
-        />
+        <GoogleAnalytics />
 
 
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
-
-          {`
-
-          window.dataLayer = window.dataLayer || [];
-
-          function gtag(){
-            window.dataLayer.push(arguments);
-          }
-
-          gtag('js', new Date());
-
-          gtag(
-            'config',
-            'G-F0TDS5VW1B'
-          );
-
-          `}
-
-        </Script>
-
-
-
-
-        {/* Organization Schema */}
 
         <script
+
           type="application/ld+json"
+
           dangerouslySetInnerHTML={{
+
             __html: JSON.stringify(structuredData),
+
           }}
+
         />
 
 
 
-        {/* Local Business Schema */}
-
         <script
+
           type="application/ld+json"
+
           dangerouslySetInnerHTML={{
+
             __html: JSON.stringify(localBusinessData),
+
           }}
+
         />
 
 
