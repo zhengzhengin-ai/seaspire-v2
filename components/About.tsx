@@ -94,7 +94,7 @@ export default function About() {
                 {String(index + 1).padStart(2, "0")}
               </div>
 
-              <h4>{reason.title}</h4>
+              <h3>{reason.title}</h3>
 
               <p>{reason.description}</p>
 

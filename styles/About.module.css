@@ -147,7 +147,7 @@
 
 .cardNumber{
 
-  color:#A7D8FF;
+  color:#3f8fbf;
 
   font-size:52px;
 
@@ -165,11 +165,11 @@
   CARD CONTENT
 ========================================*/
 
-.card h4{
+.card h3{
 
   color:#003B5C;
 
-  font-size:24px;
+  font-size:26px;
 
   font-weight:700;
 
@@ -191,7 +191,7 @@
 }
 
 
-.card:hover h4{
+.card:hover h3{
 
   color:#005B96;
 
