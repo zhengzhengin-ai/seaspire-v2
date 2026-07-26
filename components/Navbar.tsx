@@ -26,8 +26,9 @@ export default function Navbar() {
 
         <Link
           href="/"
+          prefetch={false}
           aria-label="Seaspire Home"
-          onClick={()=>setOpen(false)}
+          onClick={() => setOpen(false)}
         >
 
           <Image
@@ -52,7 +53,7 @@ export default function Navbar() {
       <nav className={styles.navLinks}>
 
 
-        {navigation.map((item)=>(
+        {navigation.map((item) => (
 
           <Link
 
@@ -60,10 +61,12 @@ export default function Navbar() {
 
             href={item.href}
 
+            prefetch={false}
+
             className={
               pathname === item.href
-              ? styles.active
-              : ""
+                ? styles.active
+                : ""
             }
 
           >
@@ -85,7 +88,7 @@ export default function Navbar() {
 
         className={styles.menuButton}
 
-        onClick={()=>setOpen(!open)}
+        onClick={() => setOpen(!open)}
 
         aria-label="Toggle Menu"
 
@@ -111,13 +114,13 @@ export default function Navbar() {
 
         className={
           open
-          ? styles.mobileMenuOpen
-          : styles.mobileMenu
+            ? styles.mobileMenuOpen
+            : styles.mobileMenu
         }
 
       >
 
-        {navigation.map((item)=>(
+        {navigation.map((item) => (
 
 
           <Link
@@ -126,12 +129,14 @@ export default function Navbar() {
 
             href={item.href}
 
-            onClick={()=>setOpen(false)}
+            prefetch={false}
+
+            onClick={() => setOpen(false)}
 
             className={
               pathname === item.href
-              ? styles.active
-              : ""
+                ? styles.active
+                : ""
             }
 
           >
