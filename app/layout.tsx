@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import Script from "next/script";
+
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
@@ -14,15 +16,20 @@ import {
   localBusinessSchema,
 } from "@/lib/structuredData";
 
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+
 
 export const metadata: Metadata = {
 
@@ -31,11 +38,15 @@ export const metadata: Metadata = {
     template: "%s | SEASPIRE PHUKET",
   },
 
+
   description: siteConfig.description,
+
 
   keywords: siteConfig.keywords,
 
+
   metadataBase: new URL(siteConfig.url),
+
 
   openGraph: {
 
@@ -62,6 +73,7 @@ export const metadata: Metadata = {
 
   },
 
+
   twitter: {
 
     card: "summary_large_image",
@@ -74,6 +86,7 @@ export const metadata: Metadata = {
 
   },
 
+
   robots: {
 
     index: true,
@@ -84,23 +97,70 @@ export const metadata: Metadata = {
 
 };
 
+
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
 
+
   const structuredData = organizationSchema();
 
   const localBusinessData = localBusinessSchema();
 
+
+
   return (
+
     <html
       lang="en"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+
+
       <body className="min-h-full flex flex-col">
+
+
+        {/* Google Analytics 4 */}
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-F0TDS5VW1B"
+          strategy="afterInteractive"
+        />
+
+
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+
+          {`
+
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag(){
+            window.dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+
+          gtag(
+            'config',
+            'G-F0TDS5VW1B'
+          );
+
+          `}
+
+        </Script>
+
+
+
+
+        {/* Organization Schema */}
 
         <script
           type="application/ld+json"
@@ -109,6 +169,10 @@ export default function RootLayout({
           }}
         />
 
+
+
+        {/* Local Business Schema */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -116,15 +180,28 @@ export default function RootLayout({
           }}
         />
 
+
+
         <Navbar />
 
+
+
         <main style={{ flex: 1 }}>
+
           {children}
+
         </main>
+
+
 
         <Footer />
 
+
       </body>
+
+
     </html>
+
   );
+
 }
