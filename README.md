@@ -1,36 +1,188 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seaspire v2 Official Website
 
-## Getting Started
+Official corporate website for **SEASPIRE PHUKET**.
 
-First, run the development server:
+Production website:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://www.seaspirephuket.com
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Project Overview
 
-## Learn More
+Seaspire v2 is a modern corporate seafood website built for:
 
-To learn more about Next.js, take a look at the following resources:
+- Seafood sourcing
+- OEM processing
+- International seafood trading
+- Food service partnerships
+- Global seafood distribution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The website focuses on:
 
-## Deploy on Vercel
+- Corporate credibility
+- SEO optimization
+- Responsive experience
+- Production-ready architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+# Technology Stack
+
+## Frontend
+
+- Next.js 16
+- TypeScript
+- React
+- CSS Modules
+
+
+## Architecture
+
+- Next.js App Router
+- Static Export
+- Component-based architecture
+- Data-driven content structure
+
+
+## Backend Integration
+
+Contact inquiry system:
+
+- Static frontend
+- PHP mail backend
+- Apache hosting compatible
+
+
+---
+
+# Production Deployment
+
+Current production environment:
+
+Website:
+
+https://www.seaspirephuket.com
+
+
+Hosting:
+
+Network Solutions
+
+
+Deployment Method:
+Next.js Static Export
++
+PHP Contact Handler
++
+Apache Hosting
+
+
+---
+
+# Main Features
+
+## Pages
+
+Completed:
+
+- Home
+- About
+- Products
+- Solutions
+- Contact
+
+
+## SEO
+
+Implemented:
+
+- Metadata configuration
+- Sitemap
+- Robots.txt
+- Open Graph Image
+- Structured Data
+
+
+## Contact System
+
+Features:
+
+- Inquiry form
+- PHP mail processing
+- Email notification
+- Client-side validation
+
+
+---
+
+# Project Structure
+seaspire-v2
+
+├── app
+├── components
+├── constants
+├── data
+├── docs
+├── lib
+├── public
+├── styles
+└── types
+
+
+---
+
+# Development Milestones
+
+## v1.0
+
+Release:
+
+Architecture Foundation
+
+Completed:
+
+- Component system
+- Page structure
+- Responsive layout
+- SEO foundation
+
+
+## v1.1.0-production
+
+Release:
+
+Production Deployment
+
+
+Completed:
+
+- Static export
+- PHP contact integration
+- Production hosting deployment
+- Sitemap
+- Robots
+- OG image
+- Contact verification
+
+
+---
+
+# Production Status
+
+Status:
+Production Ready
+
+Current release:
+v1.1.0-production
+
+---
+
+# License
+
+Private project.
+
+© SEASPIRE PHUKET
