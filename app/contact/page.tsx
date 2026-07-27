@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-
+import { Suspense } from "react";
 import PageHero from "../../components/PageHero";
 import CTA from "../../components/CTA";
 import ContactForm from "../../components/ContactForm";
 import styles from "../../styles/ContactPage.module.css";
-
+import ContactMessage from "../../components/ContactMessage";
 import { company } from "@/data";
+
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -26,9 +27,17 @@ export const metadata: Metadata = {
   ],
 };
 
+
+
 export default function ContactPage() {
+
+
+
+
   return (
     <main>
+
+
       <PageHero
         subtitle="CONTACT US"
         title={"GLOBAL SEAFOOD\nPARTNERSHIP"}
@@ -36,16 +45,27 @@ export default function ContactPage() {
         image="/images/hero/contact-hero.webp"
       />
 
+
+
       <section className={styles.contact}>
+
         <div className={styles.container}>
+
+
           <div className={styles.info}>
+
+
             <p className={styles.sectionTag}>
               GET IN TOUCH
             </p>
 
+
+
             <h2>
               Contact {company.name}
             </h2>
+
+
 
             <p>
               We work with importers, distributors, wholesalers,
@@ -53,7 +73,11 @@ export default function ContactPage() {
               reliable seafood supply solutions.
             </p>
 
+
+
+
             <div className={styles.details}>
+
 
               {company.locations.map((location) => (
 
@@ -65,17 +89,23 @@ export default function ContactPage() {
                     {location.name}
                   </h3>
 
+
                   <p>
                     {location.phone}
                   </p>
+
 
                   <p>
                     {location.address}
                   </p>
 
+
                 </div>
 
               ))}
+
+
+
 
               <div>
 
@@ -83,27 +113,62 @@ export default function ContactPage() {
                   General Inquiry
                 </h3>
 
+
                 <p>
                   {company.email}
                 </p>
 
+
               </div>
+
+
 
             </div>
 
+
           </div>
 
-          <div className={styles.form}>
+
+
+
+
+          <div
+            id="contact-form"
+            className={styles.form}
+          >
+
+
             <h2>
               Send Inquiry
             </h2>
 
+
             <ContactForm />
+
+
+            <Suspense>
+
+              <ContactMessage />
+
+            </Suspense>
+
+
           </div>
+
+
+
         </div>
+
+
       </section>
 
+
+
+
+
       <section className={styles.map}>
+
+
         <iframe
           src={company.map.embedUrl}
           width="100%"
@@ -115,12 +180,23 @@ export default function ContactPage() {
           referrerPolicy="strict-origin-when-cross-origin"
           title="Seaspire Phuket Location"
         />
+
+
       </section>
 
+
+
+
+
       <CTA
+
         title={"LET'S START\nA SEAFOOD PARTNERSHIP"}
+
         description="Contact Seaspire Phuket now to discuss sourcing, products, logistics and customized seafood supply solutions."
+
       />
+
+
     </main>
   );
 }
